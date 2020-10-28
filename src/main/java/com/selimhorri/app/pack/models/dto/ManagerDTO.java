@@ -1,6 +1,10 @@
 package com.selimhorri.app.pack.models.dto;
 
-public class ManagerDTO {
+import java.io.Serializable;
+
+public class ManagerDTO implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	private Integer empno;
 	private String ename;

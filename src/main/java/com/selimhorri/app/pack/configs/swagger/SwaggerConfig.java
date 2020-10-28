@@ -18,7 +18,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @Profile(value = {"dev", "qa"})
 public class SwaggerConfig {
-// Begin Class
 	
 	@Bean
 	public Docket productApi() {
@@ -58,7 +57,6 @@ public class SwaggerConfig {
 	
 	
 	
-// End Class
 }
 
 
