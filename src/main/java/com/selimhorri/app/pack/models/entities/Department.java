@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -28,7 +29,7 @@ public final class Department implements Serializable {
     @Column(name = "loc", length = 100)
     private String loc;
     
-    @OneToMany(mappedBy = "department")
+    @OneToMany(fetch = FetchType.LAZY)
     @JsonManagedReference
     private Set<Employee> employees;
     
@@ -63,7 +64,7 @@ public final class Department implements Serializable {
 	public void setDeptno(Integer deptno) {
 		this.deptno = deptno;
 	}
-
+	
 	public String getDname() {
 		return dname;
 	}
@@ -71,7 +72,7 @@ public final class Department implements Serializable {
 	public void setDname(String dname) {
 		this.dname = dname;
 	}
-
+	
 	public String getLoc() {
 		return loc;
 	}
@@ -79,7 +80,7 @@ public final class Department implements Serializable {
 	public void setLoc(String loc) {
 		this.loc = loc;
 	}
-
+	
 	public Set<Employee> getEmployee() {
 		return Collections.unmodifiableSet(employees);
 	}

@@ -1,6 +1,7 @@
 package com.selimhorri.app.pack.services.impls;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import javax.transaction.Transactional;
 
@@ -30,7 +31,27 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public List<Employee> findAll() {
 		return this.rep.findAll();
 	}
-
+	
+	@Override
+	public Employee findById(final Integer id) {
+		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException("\n------------ NO ELEMENT FOUND !!!!! ------------\n"));
+	}
+	
+	@Override
+	public Employee save(final Employee employee) {
+		return this.rep.save(employee);
+	}
+	
+	@Override
+	public Employee update(final Integer id) {
+		return this.rep.save(this.findById(id));
+	}
+	
+	@Override
+	public void delete(final Integer id) {
+		this.rep.delete(this.findById(id));
+	}
+	
 	@Override
 	public BossEmployeeDTO getBoss() {
 		return this.modelMapper.map(this.rep.getBoss(), BossEmployeeDTO.class);

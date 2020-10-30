@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -49,7 +50,7 @@ public final class Employee implements Serializable {
     @Column(name = "comm", precision = 7, scale = 2)
     private Double comm;
     
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "deptno", nullable = false)
     @JsonBackReference
     private Department department;
