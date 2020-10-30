@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS hr_dev_db;
 
 CREATE DATABASE hr_dev_db;
 USE hr_dev_db;
-
+ 
 CREATE TABLE employees (
   empno INT NOT NULL,
   ename VARCHAR(100) DEFAULT NULL,
