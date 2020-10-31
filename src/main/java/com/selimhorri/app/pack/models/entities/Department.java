@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
+@Entity(name = "departments")
 @Table(name = "departments")
 public final class Department implements Serializable {
 	
