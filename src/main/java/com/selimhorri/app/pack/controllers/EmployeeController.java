@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class EmployeeController {
 	
 	@GetMapping(value = {"/"})
-	public String index() {
+	public String displayIndex() {
 		return "home";
 	}
 	
