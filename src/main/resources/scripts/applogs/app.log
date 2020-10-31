@@ -1,354 +1,55 @@
-2020-10-31 13:32:48.903  INFO 28923 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Starting HrManagementSystemApplication on selim-linux with PID 28923 (/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes started by selim in /home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System)
-2020-10-31 13:32:48.905  INFO 28923 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : No active profile set, falling back to default profiles: default
-2020-10-31 13:32:48.932  INFO 28923 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-31 13:32:48.932  INFO 28923 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-31 13:32:49.299  INFO 28923 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-10-31 13:32:49.307 DEBUG 28923 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.selimhorri.app.pack.
-2020-10-31 13:32:49.312 DEBUG 28923 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/DepartmentRepository.class]
-2020-10-31 13:32:49.312 DEBUG 28923 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/EmployeeRepository.class]
-2020-10-31 13:32:49.334 DEBUG 28923 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Registering deferred repository initialization listener.
-2020-10-31 13:32:49.334  INFO 28923 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 2 JPA repository interfaces.
-2020-10-31 13:32:49.612  INFO 28923 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-10-31 13:32:49.617  INFO 28923 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-31 13:32:49.617  INFO 28923 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-10-31 13:32:49.654  INFO 28923 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-31 13:32:49.654  INFO 28923 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
-2020-10-31 13:32:49.676 DEBUG 28923 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
-2020-10-31 13:32:49.767  INFO 28923 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-31 13:32:49.771  INFO 28923 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-10-31 13:32:49.841  INFO 28923 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-10-31 13:32:49.866 DEBUG 28923 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.DepartmentRepository…
-2020-10-31 13:32:49.868  INFO 28923 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-31 13:32:49.881 DEBUG 28923 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.EmployeeRepository…
-2020-10-31 13:32:49.891  INFO 28923 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2020-10-31 13:32:49.922  WARN 28923 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-31 13:32:49.960  INFO 28923 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-31 13:32:49.998 DEBUG 28923 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-10-31 13:32:50.014  INFO 28923 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-10-31 13:32:50.028 DEBUG 28923 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
-2020-10-31 13:32:50.044 DEBUG 28923 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-10-31 13:32:50.050 DEBUG 28923 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-10-31 13:32:50.116  INFO 28923 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-10-31 13:32:50.138  INFO 28923 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-10-31 13:32:50.140  INFO 28923 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-10-31 13:32:50.166 DEBUG 28923 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
-2020-10-31 13:32:50.224  INFO 28923 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-31 13:32:50.228  INFO 28923 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-31 13:32:50.232 DEBUG 28923 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext!
-2020-10-31 13:32:50.286 DEBUG 28923 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository…
-2020-10-31 13:32:50.315 DEBUG 28923 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method getBoss
-2020-10-31 13:32:50.322 DEBUG 28923 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository.
-2020-10-31 13:32:50.326 DEBUG 28923 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository…
-2020-10-31 13:32:50.332 DEBUG 28923 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository.
-2020-10-31 13:32:50.332  INFO 28923 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-10-31 13:32:50.338  INFO 28923 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Started HrManagementSystemApplication in 1.651 seconds (JVM running for 2.027)
-2020-10-31 13:32:58.570  INFO 28923 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-31 13:32:58.570  INFO 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-10-31 13:32:58.571 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-10-31 13:32:58.574 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-10-31 13:32:58.574  INFO 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2020-10-31 13:32:58.579 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/home", parameters={}
-2020-10-31 13:32:58.580 DEBUG 28923 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.EmployeeController#index()
-2020-10-31 13:32:58.590 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8]
-2020-10-31 13:32:58.692 ERROR 28923 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "home": An error happened during template parsing (template: "class path resource [templates/home.html]")
-
-org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/home.html]")
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-Caused by: org.attoparser.ParseException: Error resolving fragment: "~{layouts :: header}": template or fragment could not be resolved (template: "home" - line 5, col 7)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 52 common frames omitted
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{layouts :: header}": template or fragment could not be resolved (template: "home" - line 5, col 7)
-	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:619) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	... 54 common frames omitted
-
-2020-10-31 13:32:58.694 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Error rendering view [org.thymeleaf.spring5.view.ThymeleafView@c80c348]
-
-org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/home.html]")
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-Caused by: org.attoparser.ParseException: Error resolving fragment: "~{layouts :: header}": template or fragment could not be resolved (template: "home" - line 5, col 7)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 52 common frames omitted
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{layouts :: header}": template or fragment could not be resolved (template: "home" - line 5, col 7)
-	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:619) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	... 54 common frames omitted
-
-2020-10-31 13:32:58.694 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/home.html]")
-2020-10-31 13:32:58.696 ERROR 28923 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/home.html]")] with root cause
-
-org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{layouts :: header}": template or fragment could not be resolved (template: "home" - line 5, col 7)
-	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:619) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-
-2020-10-31 13:32:58.699 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
-2020-10-31 13:32:58.701 DEBUG 28923 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
-2020-10-31 13:32:58.708 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
-2020-10-31 13:32:58.712 DEBUG 28923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
-2020-10-31 13:33:03.959  INFO 28923 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2020-10-31 13:33:04.019  INFO 28923 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-10-31 13:33:04.020  INFO 28923 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-31 13:33:04.022  INFO 28923 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-10-31 13:33:04.028  INFO 28923 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-10-31 13:35:29.399  INFO 29109 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Starting HrManagementSystemApplication on selim-linux with PID 29109 (/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes started by selim in /home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System)
-2020-10-31 13:35:29.401  INFO 29109 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : No active profile set, falling back to default profiles: default
-2020-10-31 13:35:29.425  INFO 29109 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-31 13:35:29.426  INFO 29109 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-31 13:35:29.752  INFO 29109 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-10-31 13:35:29.760 DEBUG 29109 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.selimhorri.app.pack.
-2020-10-31 13:35:29.765 DEBUG 29109 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/DepartmentRepository.class]
-2020-10-31 13:35:29.765 DEBUG 29109 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/EmployeeRepository.class]
-2020-10-31 13:35:29.785 DEBUG 29109 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Registering deferred repository initialization listener.
-2020-10-31 13:35:29.785  INFO 29109 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 2 JPA repository interfaces.
-2020-10-31 13:35:30.052  INFO 29109 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-10-31 13:35:30.057  INFO 29109 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-31 13:35:30.057  INFO 29109 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-10-31 13:35:30.092  INFO 29109 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-31 13:35:30.092  INFO 29109 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 666 ms
-2020-10-31 13:35:30.113 DEBUG 29109 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
-2020-10-31 13:35:30.194  INFO 29109 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-31 13:35:30.198  INFO 29109 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-10-31 13:35:30.259  INFO 29109 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-10-31 13:35:30.280 DEBUG 29109 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.DepartmentRepository…
-2020-10-31 13:35:30.281  INFO 29109 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-31 13:35:30.294 DEBUG 29109 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.EmployeeRepository…
-2020-10-31 13:35:30.301  INFO 29109 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2020-10-31 13:35:30.333  WARN 29109 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-31 13:35:30.356  INFO 29109 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-31 13:35:30.405  INFO 29109 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-10-31 13:35:30.408 DEBUG 29109 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-10-31 13:35:30.440 DEBUG 29109 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
-2020-10-31 13:35:30.456 DEBUG 29109 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-10-31 13:35:30.462 DEBUG 29109 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-10-31 13:35:30.534  INFO 29109 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-10-31 13:35:30.555  INFO 29109 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-10-31 13:35:30.557  INFO 29109 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-10-31 13:35:30.582 DEBUG 29109 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
-2020-10-31 13:35:30.600  INFO 29109 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-31 13:35:30.604  INFO 29109 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-31 13:35:30.608 DEBUG 29109 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext!
-2020-10-31 13:35:30.662 DEBUG 29109 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository…
-2020-10-31 13:35:30.686 DEBUG 29109 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository.
-2020-10-31 13:35:30.690 DEBUG 29109 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository…
-2020-10-31 13:35:30.700 DEBUG 29109 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method getBoss
-2020-10-31 13:35:30.707 DEBUG 29109 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository.
-2020-10-31 13:35:30.708  INFO 29109 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-10-31 13:35:30.713  INFO 29109 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Started HrManagementSystemApplication in 1.532 seconds (JVM running for 1.907)
-2020-10-31 13:35:49.123  INFO 29109 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-31 13:35:49.124  INFO 29109 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-10-31 13:35:49.124 DEBUG 29109 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-10-31 13:35:49.127 DEBUG 29109 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-10-31 13:35:49.128  INFO 29109 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2020-10-31 13:35:49.132 DEBUG 29109 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2020-10-31 13:35:49.133 DEBUG 29109 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findAll()
-2020-10-31 13:35:49.205 DEBUG 29109 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+2020-10-31 16:14:33.074  INFO 10746 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Starting HrManagementSystemApplication on selim-linux with PID 10746 (/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes started by selim in /home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System)
+2020-10-31 16:14:33.076  INFO 10746 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : No active profile set, falling back to default profiles: default
+2020-10-31 16:14:33.099  INFO 10746 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-31 16:14:33.099  INFO 10746 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-31 16:14:33.461  INFO 10746 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 16:14:33.468 DEBUG 10746 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.selimhorri.app.pack.
+2020-10-31 16:14:33.472 DEBUG 10746 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/DepartmentRepository.class]
+2020-10-31 16:14:33.473 DEBUG 10746 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/EmployeeRepository.class]
+2020-10-31 16:14:33.492 DEBUG 10746 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Registering deferred repository initialization listener.
+2020-10-31 16:14:33.493  INFO 10746 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 2 JPA repository interfaces.
+2020-10-31 16:14:33.745  INFO 10746 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-31 16:14:33.749  INFO 10746 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 16:14:33.749  INFO 10746 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 16:14:33.793  INFO 10746 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 16:14:33.793  INFO 10746 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 694 ms
+2020-10-31 16:14:33.815 DEBUG 10746 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2020-10-31 16:14:33.900  INFO 10746 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 16:14:33.904  INFO 10746 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-31 16:14:33.966  INFO 10746 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-31 16:14:33.987 DEBUG 10746 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.DepartmentRepository…
+2020-10-31 16:14:33.988  INFO 10746 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 16:14:34.000 DEBUG 10746 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.EmployeeRepository…
+2020-10-31 16:14:34.006  INFO 10746 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-31 16:14:34.038  WARN 10746 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 16:14:34.056  INFO 10746 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-31 16:14:34.104  INFO 10746 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-10-31 16:14:34.118 DEBUG 10746 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-31 16:14:34.152 DEBUG 10746 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
+2020-10-31 16:14:34.170 DEBUG 10746 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-31 16:14:34.177 DEBUG 10746 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-31 16:14:34.241  INFO 10746 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-31 16:14:34.262  INFO 10746 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-31 16:14:34.263  INFO 10746 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 16:14:34.289  INFO 10746 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 16:14:34.290 DEBUG 10746 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
+2020-10-31 16:14:34.292  INFO 10746 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 16:14:34.296 DEBUG 10746 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext!
+2020-10-31 16:14:34.356 DEBUG 10746 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository…
+2020-10-31 16:14:34.386 DEBUG 10746 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method getBoss
+2020-10-31 16:14:34.394 DEBUG 10746 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository.
+2020-10-31 16:14:34.397 DEBUG 10746 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository…
+2020-10-31 16:14:34.404 DEBUG 10746 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository.
+2020-10-31 16:14:34.405  INFO 10746 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 16:14:34.410  INFO 10746 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Started HrManagementSystemApplication in 1.55 seconds (JVM running for 1.916)
+2020-10-31 16:14:51.115  INFO 10746 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 16:14:51.115  INFO 10746 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-31 16:14:51.116 DEBUG 10746 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-10-31 16:14:51.119 DEBUG 10746 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-31 16:14:51.120  INFO 10746 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-10-31 16:14:51.124 DEBUG 10746 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/", parameters={}
+2020-10-31 16:14:51.126 DEBUG 10746 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findAll()
+2020-10-31 16:14:51.190 DEBUG 10746 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
     select
         employee0_.empno as empno1_1_,
         employee0_.comm as comm2_1_,
@@ -360,7 +61,7 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{la
         employee0_.sal as sal7_1_ 
     from
         employees employee0_
-2020-10-31 13:35:49.222 DEBUG 29109 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+2020-10-31 16:14:51.208 DEBUG 10746 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
     select
         department0_.deptno as deptno1_0_0_,
         department0_.dname as dname2_0_0_,
@@ -369,7 +70,7 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{la
         departments department0_ 
     where
         department0_.deptno=?
-2020-10-31 13:35:49.229 DEBUG 29109 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+2020-10-31 16:14:51.215 DEBUG 10746 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
     select
         department0_.deptno as deptno1_0_0_,
         department0_.dname as dname2_0_0_,
@@ -378,7 +79,7 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{la
         departments department0_ 
     where
         department0_.deptno=?
-2020-10-31 13:35:49.230 DEBUG 29109 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+2020-10-31 16:14:51.216 DEBUG 10746 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
     select
         department0_.deptno as deptno1_0_0_,
         department0_.dname as dname2_0_0_,
@@ -387,8 +88,8 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{la
         departments department0_ 
     where
         department0_.deptno=?
-2020-10-31 13:35:49.244 DEBUG 29109 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-2020-10-31 13:35:49.246 DEBUG 29109 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+2020-10-31 16:14:51.233 DEBUG 10746 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:14:51.245 DEBUG 10746 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
     select
         employees0_.deptno as deptno8_1_0_,
         employees0_.empno as empno1_1_0_,
@@ -404,19 +105,76 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{la
         employees employees0_ 
     where
         employees0_.deptno=?
-2020-10-31 13:35:49.254 DEBUG 29109 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
-2020-10-31 13:35:49.285 DEBUG 29109 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-10-31 13:35:54.576 DEBUG 29109 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/departments/", parameters={}
-2020-10-31 13:35:54.577 DEBUG 29109 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.DepartmentRESTController#findAll()
-2020-10-31 13:35:54.584 DEBUG 29109 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+2020-10-31 16:14:51.251 DEBUG 10746 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:14:51.308 DEBUG 10746 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:14:59.187 DEBUG 10746 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/100", parameters={}
+2020-10-31 16:14:59.188 DEBUG 10746 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:14:59.198 DEBUG 10746 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
     select
-        department0_.deptno as deptno1_0_,
-        department0_.dname as dname2_0_,
-        department0_.loc as loc3_0_ 
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
     from
-        departments department0_
-2020-10-31 13:35:54.586 DEBUG 29109 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-2020-10-31 13:35:54.586 DEBUG 29109 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:14:59.201 DEBUG 10746 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:14:59.208 DEBUG 10746 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:14:59.209 DEBUG 10746 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=
+------------ NO ELEMENT FOUND !!!!! ------------
+, cause=java.util.NoSuchElementE (truncated)...]
+2020-10-31 16:14:59.210  WARN 10746 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: 
+------------ NO ELEMENT FOUND !!!!! ------------
+]
+2020-10-31 16:14:59.210 DEBUG 10746 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:16:13.549 DEBUG 10746 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/", parameters={}
+2020-10-31 16:16:13.550 DEBUG 10746 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findAll()
+2020-10-31 16:16:13.551 DEBUG 10746 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_,
+        employee0_.comm as comm2_1_,
+        employee0_.deptno as deptno8_1_,
+        employee0_.ename as ename3_1_,
+        employee0_.hiredate as hiredate4_1_,
+        employee0_.job as job5_1_,
+        employee0_.mgr as mgr6_1_,
+        employee0_.sal as sal7_1_ 
+    from
+        employees employee0_
+2020-10-31 16:16:13.554 DEBUG 10746 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:16:13.555 DEBUG 10746 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:16:13.556 DEBUG 10746 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:16:13.558 DEBUG 10746 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:16:13.559 DEBUG 10746 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
     select
         employees0_.deptno as deptno8_1_0_,
         employees0_.empno as empno1_1_0_,
@@ -432,10 +190,900 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{la
         employees employees0_ 
     where
         employees0_.deptno=?
-2020-10-31 13:35:54.592 DEBUG 29109 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
-2020-10-31 13:35:54.596 DEBUG 29109 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-10-31 13:36:08.517  INFO 29109 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2020-10-31 13:36:08.576  INFO 29109 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-10-31 13:36:08.578  INFO 29109 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-31 13:36:08.579  INFO 29109 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-10-31 13:36:08.610  INFO 29109 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-31 16:16:13.561 DEBUG 10746 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:16:13.563 DEBUG 10746 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:16:24.671 DEBUG 10746 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/employees/", parameters={}
+2020-10-31 16:16:24.671 DEBUG 10746 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:16:24.694 DEBUG 10746 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=100, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=90 (truncated)...]
+2020-10-31 16:16:24.700 DEBUG 10746 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:16:24.701 DEBUG 10746 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:16:24.705 DEBUG 10746 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60
+2020-10-31 16:16:24.710 ERROR 10746 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60] with root cause
+
+javax.persistence.EntityNotFoundException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:163) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:216) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:332) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:108) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:74) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:113) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1187) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.internal.SessionImpl.internalLoad(SessionImpl.java:1052) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.EntityType.resolveIdentifier(EntityType.java:697) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.EntityType.resolve(EntityType.java:464) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.ManyToOneType.resolve(ManyToOneType.java:240) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.EntityType.resolve(EntityType.java:457) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.EntityType.replace(EntityType.java:358) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.AbstractType.replace(AbstractType.java:164) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.type.TypeHelper.replace(TypeHelper.java:204) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.copyValues(DefaultMergeEventListener.java:488) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsTransient(DefaultMergeEventListener.java:241) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:318) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:172) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:70) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:794) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:781) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:366) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.sun.proxy.$Proxy108.merge(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.sun.proxy.$Proxy108.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:557) ~[spring-data-jpa-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.data.repository.core.support.ImplementationInvocationMetadata.invoke(ImplementationInvocationMetadata.java:72) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:382) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:205) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:549) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:155) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178) ~[spring-data-jpa-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.sun.proxy.$Proxy112.save(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.sun.proxy.$Proxy75.save(Unknown Source) ~[na:na]
+	at com.selimhorri.app.pack.services.impls.EmployeeServiceImpl.save(EmployeeServiceImpl.java:42) ~[classes/:na]
+	at com.selimhorri.app.pack.services.impls.EmployeeServiceImpl$$FastClassBySpringCGLIB$$39f72de7.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.selimhorri.app.pack.services.impls.EmployeeServiceImpl$$EnhancerBySpringCGLIB$$65714513.save(<generated>) ~[classes/:na]
+	at com.selimhorri.app.pack.controllers.api.EmployeeRESTController.save(EmployeeRESTController.java:46) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2020-10-31 16:16:24.713 DEBUG 10746 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2020-10-31 16:16:24.713 DEBUG 10746 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-10-31 16:16:24.718 DEBUG 10746 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:16:24.718 DEBUG 10746 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 31 16:16:24 CET 2020, status=500, error=Internal Server Error, trace=org.springfr (truncated)...]
+2020-10-31 16:16:24.722 DEBUG 10746 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2020-10-31 16:17:28.599  INFO 10746 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-31 16:17:28.657  INFO 10746 --- [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 16:17:28.658  INFO 10746 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 16:17:28.659  INFO 10746 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-31 16:17:28.666  INFO 10746 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-31 16:18:43.347  INFO 10927 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Starting HrManagementSystemApplication on selim-linux with PID 10927 (/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes started by selim in /home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System)
+2020-10-31 16:18:43.348  INFO 10927 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : No active profile set, falling back to default profiles: default
+2020-10-31 16:18:43.372  INFO 10927 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-31 16:18:43.372  INFO 10927 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-31 16:18:43.736  INFO 10927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 16:18:43.746 DEBUG 10927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.selimhorri.app.pack.
+2020-10-31 16:18:43.751 DEBUG 10927 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/DepartmentRepository.class]
+2020-10-31 16:18:43.752 DEBUG 10927 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/home/selim/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/HR-Management-System/target/classes/com/selimhorri/app/pack/repositories/EmployeeRepository.class]
+2020-10-31 16:18:43.772 DEBUG 10927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Registering deferred repository initialization listener.
+2020-10-31 16:18:43.772  INFO 10927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 2 JPA repository interfaces.
+2020-10-31 16:18:44.030  INFO 10927 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-31 16:18:44.034  INFO 10927 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 16:18:44.034  INFO 10927 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 16:18:44.069  INFO 10927 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 16:18:44.069  INFO 10927 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 697 ms
+2020-10-31 16:18:44.090 DEBUG 10927 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2020-10-31 16:18:44.173  INFO 10927 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 16:18:44.177  INFO 10927 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-31 16:18:44.241  INFO 10927 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-31 16:18:44.264 DEBUG 10927 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.DepartmentRepository…
+2020-10-31 16:18:44.264  INFO 10927 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 16:18:44.278 DEBUG 10927 --- [restartedMain] ate$LazyRepositoryInjectionPointResolver : Creating lazy injection proxy for com.selimhorri.app.pack.repositories.EmployeeRepository…
+2020-10-31 16:18:44.283  INFO 10927 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-31 16:18:44.318  WARN 10927 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 16:18:44.339  INFO 10927 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-31 16:18:44.390  INFO 10927 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-10-31 16:18:44.395 DEBUG 10927 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-31 16:18:44.427 DEBUG 10927 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
+2020-10-31 16:18:44.445 DEBUG 10927 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-31 16:18:44.452 DEBUG 10927 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-31 16:18:44.516  INFO 10927 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-31 16:18:44.536  INFO 10927 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-31 16:18:44.538  INFO 10927 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 16:18:44.561 DEBUG 10927 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
+2020-10-31 16:18:44.583  INFO 10927 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 16:18:44.587  INFO 10927 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 16:18:44.592 DEBUG 10927 --- [restartedMain] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext!
+2020-10-31 16:18:44.650 DEBUG 10927 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository…
+2020-10-31 16:18:44.675 DEBUG 10927 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.DepartmentRepository.
+2020-10-31 16:18:44.678 DEBUG 10927 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository…
+2020-10-31 16:18:44.689 DEBUG 10927 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method getBoss
+2020-10-31 16:18:44.697 DEBUG 10927 --- [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.selimhorri.app.pack.repositories.EmployeeRepository.
+2020-10-31 16:18:44.697  INFO 10927 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 16:18:44.703  INFO 10927 --- [restartedMain] c.s.a.p.HrManagementSystemApplication    : Started HrManagementSystemApplication in 1.556 seconds (JVM running for 1.923)
+2020-10-31 16:19:01.395  INFO 10927 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 16:19:01.395  INFO 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-31 16:19:01.395 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-10-31 16:19:01.398 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-31 16:19:01.398  INFO 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-10-31 16:19:01.403 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/employees/", parameters={}
+2020-10-31 16:19:01.404 DEBUG 10927 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:19:01.462 DEBUG 10927 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=100, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=90 (truncated)...]
+2020-10-31 16:19:01.484 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:19:01.496 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:19:01.511 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        employees
+        (comm, deptno, ename, hiredate, job, mgr, sal, empno) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2020-10-31 16:19:01.783 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:19:01.784 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:19:01.792 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:19:01.802 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:19:19.288 DEBUG 10927 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : DELETE "/api/employees/100", parameters={}
+2020-10-31 16:19:19.288 DEBUG 10927 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#delete(String)
+2020-10-31 16:19:19.293 DEBUG 10927 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:19:19.295 DEBUG 10927 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:19:19.300 DEBUG 10927 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    delete 
+    from
+        employees 
+    where
+        empno=?
+2020-10-31 16:19:19.557 DEBUG 10927 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:19:19.557 DEBUG 10927 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+2020-10-31 16:19:19.558 DEBUG 10927 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:19:41.016 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/100", parameters={}
+2020-10-31 16:19:41.016 DEBUG 10927 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:19:41.017 DEBUG 10927 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:19:41.020 DEBUG 10927 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:19:41.026 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:19:41.027 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=
+------------ NO ELEMENT FOUND !!!!! ------------
+, cause=java.util.NoSuchElementE (truncated)...]
+2020-10-31 16:19:41.027  WARN 10927 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: 
+------------ NO ELEMENT FOUND !!!!! ------------
+]
+2020-10-31 16:19:41.028 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:19:56.082 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2020-10-31 16:19:56.082 DEBUG 10927 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findAll()
+2020-10-31 16:19:56.158 DEBUG 10927 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_,
+        employee0_.comm as comm2_1_,
+        employee0_.deptno as deptno8_1_,
+        employee0_.ename as ename3_1_,
+        employee0_.hiredate as hiredate4_1_,
+        employee0_.job as job5_1_,
+        employee0_.mgr as mgr6_1_,
+        employee0_.sal as sal7_1_ 
+    from
+        employees employee0_
+2020-10-31 16:19:56.161 DEBUG 10927 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:19:56.163 DEBUG 10927 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:19:56.164 DEBUG 10927 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:19:56.170 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:19:56.170 DEBUG 10927 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:19:56.173 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:19:56.175 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:20:18.079 DEBUG 10927 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/employees", parameters={}
+2020-10-31 16:20:18.079 DEBUG 10927 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:20:18.080 DEBUG 10927 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=7566, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=9 (truncated)...]
+2020-10-31 16:20:18.081 DEBUG 10927 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:20:18.082 DEBUG 10927 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:20:18.084 DEBUG 10927 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:20:18.086 DEBUG 10927 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    update
+        employees 
+    set
+        comm=?,
+        deptno=?,
+        ename=?,
+        hiredate=?,
+        job=?,
+        mgr=?,
+        sal=? 
+    where
+        empno=?
+2020-10-31 16:20:18.351 DEBUG 10927 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:20:18.351 DEBUG 10927 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:20:18.354 DEBUG 10927 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:20:18.357 DEBUG 10927 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:20:34.225 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/7566", parameters={}
+2020-10-31 16:20:34.226 DEBUG 10927 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:20:34.228 DEBUG 10927 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:20:34.230 DEBUG 10927 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:20:34.233 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:20:34.233 DEBUG 10927 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:20:34.236 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:20:34.236 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:20:55.422 DEBUG 10927 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/employees/", parameters={}
+2020-10-31 16:20:55.422 DEBUG 10927 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:20:55.423 DEBUG 10927 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=7566, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=9 (truncated)...]
+2020-10-31 16:20:55.424 DEBUG 10927 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:20:55.424 DEBUG 10927 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:20:55.426 DEBUG 10927 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    update
+        employees 
+    set
+        comm=?,
+        deptno=?,
+        ename=?,
+        hiredate=?,
+        job=?,
+        mgr=?,
+        sal=? 
+    where
+        empno=?
+2020-10-31 16:20:55.428 DEBUG 10927 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:20:55.428 DEBUG 10927 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:20:55.430 DEBUG 10927 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:20:55.430 DEBUG 10927 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:20:58.120 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/employees/", parameters={}
+2020-10-31 16:20:58.120 DEBUG 10927 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:20:58.121 DEBUG 10927 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=7566, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=9 (truncated)...]
+2020-10-31 16:20:58.122 DEBUG 10927 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:20:58.123 DEBUG 10927 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:20:58.125 DEBUG 10927 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    update
+        employees 
+    set
+        comm=?,
+        deptno=?,
+        ename=?,
+        hiredate=?,
+        job=?,
+        mgr=?,
+        sal=? 
+    where
+        empno=?
+2020-10-31 16:20:58.128 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:20:58.128 DEBUG 10927 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:20:58.131 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:20:58.132 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:20:59.217 DEBUG 10927 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/employees/", parameters={}
+2020-10-31 16:20:59.217 DEBUG 10927 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:20:59.218 DEBUG 10927 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=7566, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=9 (truncated)...]
+2020-10-31 16:20:59.219 DEBUG 10927 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:20:59.220 DEBUG 10927 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:20:59.222 DEBUG 10927 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        employees 
+    set
+        comm=?,
+        deptno=?,
+        ename=?,
+        hiredate=?,
+        job=?,
+        mgr=?,
+        sal=? 
+    where
+        empno=?
+2020-10-31 16:20:59.224 DEBUG 10927 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:20:59.224 DEBUG 10927 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:20:59.227 DEBUG 10927 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:20:59.229 DEBUG 10927 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:21:17.062 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/7566", parameters={}
+2020-10-31 16:21:17.062 DEBUG 10927 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:21:17.064 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:21:17.065 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:21:17.066 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:21:17.066 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        employees0_.deptno as deptno8_1_0_,
+        employees0_.empno as empno1_1_0_,
+        employees0_.empno as empno1_1_1_,
+        employees0_.comm as comm2_1_1_,
+        employees0_.deptno as deptno8_1_1_,
+        employees0_.ename as ename3_1_1_,
+        employees0_.hiredate as hiredate4_1_1_,
+        employees0_.job as job5_1_1_,
+        employees0_.mgr as mgr6_1_1_,
+        employees0_.sal as sal7_1_1_ 
+    from
+        employees employees0_ 
+    where
+        employees0_.deptno=?
+2020-10-31 16:21:17.068 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [java.lang.StackOverflowError]
+2020-10-31 16:21:17.069 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:23:19.781 DEBUG 10927 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : DELETE "/api/employees/7566", parameters={}
+2020-10-31 16:23:19.781 DEBUG 10927 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#delete(String)
+2020-10-31 16:23:19.782 DEBUG 10927 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:23:19.783 DEBUG 10927 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:23:19.785 DEBUG 10927 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    delete 
+    from
+        employees 
+    where
+        empno=?
+2020-10-31 16:23:20.101 DEBUG 10927 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:23:20.101 DEBUG 10927 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+2020-10-31 16:23:20.101 DEBUG 10927 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-31 16:23:30.381 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/7566", parameters={}
+2020-10-31 16:23:30.382 DEBUG 10927 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:23:30.383 DEBUG 10927 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:23:30.384 DEBUG 10927 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:23:30.384 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:23:30.385 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=
+------------ NO ELEMENT FOUND !!!!! ------------
+, cause=java.util.NoSuchElementE (truncated)...]
+2020-10-31 16:23:30.385  WARN 10927 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: 
+------------ NO ELEMENT FOUND !!!!! ------------
+]
+2020-10-31 16:23:30.385 DEBUG 10927 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:23:42.988 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/1000", parameters={}
+2020-10-31 16:23:42.988 DEBUG 10927 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:23:42.989 DEBUG 10927 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:23:42.990 DEBUG 10927 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:23:42.991 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:23:42.991 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=
+------------ NO ELEMENT FOUND !!!!! ------------
+, cause=java.util.NoSuchElementE (truncated)...]
+2020-10-31 16:23:42.991  WARN 10927 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: 
+------------ NO ELEMENT FOUND !!!!! ------------
+]
+2020-10-31 16:23:42.991 DEBUG 10927 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:23:47.145 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/100", parameters={}
+2020-10-31 16:23:47.145 DEBUG 10927 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:23:47.148 DEBUG 10927 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:23:47.150 DEBUG 10927 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:23:47.150 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:23:47.150 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=
+------------ NO ELEMENT FOUND !!!!! ------------
+, cause=java.util.NoSuchElementE (truncated)...]
+2020-10-31 16:23:47.151  WARN 10927 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: 
+------------ NO ELEMENT FOUND !!!!! ------------
+]
+2020-10-31 16:23:47.151 DEBUG 10927 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:23:53.264 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/100", parameters={}
+2020-10-31 16:23:53.264 DEBUG 10927 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#findById(String)
+2020-10-31 16:23:53.266 DEBUG 10927 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:23:53.267 DEBUG 10927 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:23:53.268 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:23:53.268 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=
+------------ NO ELEMENT FOUND !!!!! ------------
+, cause=java.util.NoSuchElementE (truncated)...]
+2020-10-31 16:23:53.268  WARN 10927 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: 
+------------ NO ELEMENT FOUND !!!!! ------------
+]
+2020-10-31 16:23:53.268 DEBUG 10927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:24:10.968 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/employees/", parameters={}
+2020-10-31 16:24:10.968 DEBUG 10927 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.selimhorri.app.pack.controllers.api.EmployeeRESTController#save(Employee)
+2020-10-31 16:24:10.969 DEBUG 10927 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [empno=100, ename=Selim, job=Software Engineer, mgr=7499, hireDate=2019-04-15T00:00, sal=90 (truncated)...]
+2020-10-31 16:24:10.970 DEBUG 10927 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        employee0_.empno as empno1_1_0_,
+        employee0_.comm as comm2_1_0_,
+        employee0_.deptno as deptno8_1_0_,
+        employee0_.ename as ename3_1_0_,
+        employee0_.hiredate as hiredate4_1_0_,
+        employee0_.job as job5_1_0_,
+        employee0_.mgr as mgr6_1_0_,
+        employee0_.sal as sal7_1_0_ 
+    from
+        employees employee0_ 
+    where
+        employee0_.empno=?
+2020-10-31 16:24:10.971 DEBUG 10927 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        department0_.deptno as deptno1_0_0_,
+        department0_.dname as dname2_0_0_,
+        department0_.loc as loc3_0_0_ 
+    from
+        departments department0_ 
+    where
+        department0_.deptno=?
+2020-10-31 16:24:10.973 DEBUG 10927 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.selimhorri.app.pack.exceptions.ApiHandler#handleExceptionMsg(RuntimeException, WebRequest)
+2020-10-31 16:24:10.974 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-10-31 16:24:10.974 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ExceptionMsg [msg=Unable to find com.selimhorri.app.pack.models.entities.Department with id 60; nest (truncated)...]
+2020-10-31 16:24:10.974  WARN 10927 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.selimhorri.app.pack.models.entities.Department with id 60]
+2020-10-31 16:24:10.974 DEBUG 10927 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2020-10-31 16:24:30.787  INFO 10927 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-31 16:24:30.844  INFO 10927 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 16:24:30.845  INFO 10927 --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 16:24:30.846  INFO 10927 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-31 16:24:30.852  INFO 10927 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

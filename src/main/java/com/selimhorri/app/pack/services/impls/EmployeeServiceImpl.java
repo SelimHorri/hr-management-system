@@ -43,8 +43,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 	
 	@Override
-	public Employee update(final Integer id) {
-		return this.rep.save(this.findById(id));
+	public Employee update(final Employee employee) {
+		return this.rep.save(employee);
 	}
 	
 	@Override

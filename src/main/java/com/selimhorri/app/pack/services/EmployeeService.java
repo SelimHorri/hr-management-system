@@ -10,7 +10,7 @@ public interface EmployeeService {
 	public abstract List<Employee> findAll();
 	public abstract Employee findById(final Integer id);
 	public abstract Employee save(final Employee employee);
-	public abstract Employee update(final Integer id);
+	public abstract Employee update(final Employee employee);
 	public abstract void delete(final Integer id);
 	public abstract BossEmployeeDTO getBoss();
 	

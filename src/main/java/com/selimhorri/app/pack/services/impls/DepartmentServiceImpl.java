@@ -34,13 +34,13 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 	
 	@Override
-	public Department save(final Department Department) {
-		return this.rep.save(Department);
+	public Department save(final Department department) {
+		return this.rep.save(department);
 	}
 	
 	@Override
-	public Department update(final Integer id) {
-		return this.rep.save(this.findById(id));
+	public Department update(final Department department) {
+		return this.rep.save(department);
 	}
 	
 	@Override

@@ -41,14 +41,14 @@ public class EmployeeRESTController {
 		return new ResponseEntity<>(this.service.findById(Integer.parseInt(id)), HttpStatus.OK);
 	}
 	
-	@PostMapping(value = {"/", "/save"})
+	@PostMapping(value = {"", "/", "/save"})
 	public ResponseEntity<Employee> save(@RequestBody final Employee employee) {
 		return new ResponseEntity<>(this.service.save(employee), HttpStatus.OK);
 	}
 	
-	@PutMapping(value = {"/{id}", "/update/{id}"})
-	public ResponseEntity<Employee> update(@PathVariable("id") final String id) {
-		return new ResponseEntity<>(this.service.update(Integer.parseInt(id)), HttpStatus.OK);
+	@PutMapping(value = {"", "/", "/update"})
+	public ResponseEntity<Employee> update(@RequestBody final Employee employee) {
+		return new ResponseEntity<>(this.service.update(employee), HttpStatus.OK);
 	}
 	
 	@DeleteMapping(value = {"/{id}", "/delete/{id}"})

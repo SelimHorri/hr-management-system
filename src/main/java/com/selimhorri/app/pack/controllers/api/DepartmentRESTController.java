@@ -40,14 +40,14 @@ public class DepartmentRESTController {
 		return new ResponseEntity<>(this.service.findById(Integer.parseInt(id)), HttpStatus.OK);
 	}
 	
-	@PostMapping(value = {"/", "/save"})
-	public ResponseEntity<Department> save(@RequestBody final Department Department) {
-		return new ResponseEntity<>(this.service.save(Department), HttpStatus.OK);
+	@PostMapping(value = {"", "/", "/save"})
+	public ResponseEntity<Department> save(@RequestBody final Department department) {
+		return new ResponseEntity<>(this.service.save(department), HttpStatus.OK);
 	}
 	
-	@PutMapping(value = {"/{id}", "/update/{id}"})
-	public ResponseEntity<Department> update(@PathVariable("id") final String id) {
-		return new ResponseEntity<>(this.service.update(Integer.parseInt(id)), HttpStatus.OK);
+	@PutMapping(value = {"", "/", "/update"})
+	public ResponseEntity<Department> update(@RequestBody final Department department) {
+		return new ResponseEntity<>(this.service.update(department), HttpStatus.OK);
 	}
 	
 	@DeleteMapping(value = {"/{id}", "/delete/{id}"})
