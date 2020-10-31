@@ -31,7 +31,7 @@ public class EmployeeRESTController {
 		this.service = service;
 	}
 	
-	@GetMapping(value = {"/"})
+	@GetMapping(value = {"", "/"})
 	public ResponseEntity<List<Employee>> findAll() {
 		return new ResponseEntity<>(this.service.findAll(), HttpStatus.OK);
 	}

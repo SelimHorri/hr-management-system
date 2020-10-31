@@ -11,7 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -19,67 +18,47 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
-@Entity(name = "employees")
+@Entity
 @Table(name = "employees")
 public final class Employee implements Serializable {
 	
-    private static final long serialVersionUID  =  1L;
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-    @Column(name = "empno", unique = true, nullable = false, precision = 10)
-    private Integer empno;
+	@Column(name = "empno", unique = true, nullable = false, precision = 10)
+	private Integer empno;
 	
-    @Column(name = "ename", length = 100)
-    private String ename;
-    
-    @Column(name = "job", length = 100)
-    private String job;
-    
-    @Column(name = "mgr", precision = 10)
-    private Integer mgr;
-    
-    @JsonFormat(shape = Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
+	@Column(name = "ename", length = 100)
+	private String ename;
+	
+	@Column(name = "job", length = 100)
+	private String job;
+	
+	@Column(name = "mgr", precision = 10)
+	private Integer mgr;
+	
+	@JsonFormat(shape = Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
+	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @Column(name  =  "hiredate")
-    private LocalDateTime hireDate;
-    
-    @Column(name = "sal", precision = 7, scale = 2)
-    private Double sal;
-    
-    @Column(name = "comm", precision = 7, scale = 2)
-    private Double comm;
-    
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(name = "deptno", nullable = false)
-    @JsonBackReference
-    private Department department;
-    
-    @Override
-	public String toString() {
-		return "Employee [empno=" + empno + ", ename=" + ename + ", job=" + job + ", mgr=" + mgr + ", hireDate="
-				+ hireDate + ", sal=" + sal + ", comm=" + comm + ", department=" + department + "]";
-	}
-    
-	public Employee() {
-    	
-	}
+	@Column(name = "hiredate")
+	private LocalDateTime hireDate;
 	
-	public Employee(String ename, String job, Integer mgr, LocalDateTime hireDate, Double sal, Double comm,
-			Department department) {
-		super();
-		this.ename = ename;
-		this.job = job;
-		this.mgr = mgr;
-		this.hireDate = hireDate;
-		this.sal = sal;
-		this.comm = comm;
-		this.department = department;
+	@Column(name = "sal", precision = 7, scale = 2)
+	private Double sal;
+	
+	@Column(name = "comm", precision = 7, scale = 2)
+	private Double comm;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "deptno", referencedColumnName = "deptno")
+	private Department department;
+	
+	public Employee() {
+		
 	}
 	
 	public Employee(Integer empno, String ename, String job, Integer mgr, LocalDateTime hireDate, Double sal,
 			Double comm, Department department) {
-		super();
 		this.empno = empno;
 		this.ename = ename;
 		this.job = job;
@@ -88,6 +67,13 @@ public final class Employee implements Serializable {
 		this.sal = sal;
 		this.comm = comm;
 		this.department = department;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [empno=" + empno + ", ename=" + ename + ", job=" + job + ", mgr=" + mgr + ", hireDate="
+				+ hireDate + ", sal=" + sal + ", comm=" + comm + ", department=" + department
+				+ "]";
 	}
 	
 	public Integer getEmpno() {
@@ -153,11 +139,10 @@ public final class Employee implements Serializable {
 	public void setDepartment(final Department department) {
 		this.department = department;
 	}
-    
-    
-    
+	
+	
+		
 }
-
 
 
 

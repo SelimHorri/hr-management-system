@@ -30,7 +30,7 @@ public class DepartmentRESTController {
 		this.service = service;
 	}
 	
-	@GetMapping(value = {"/"})
+	@GetMapping(value = {"", "/"})
 	public ResponseEntity<List<Department>> findAll() {
 		return new ResponseEntity<>(this.service.findAll(), HttpStatus.OK);
 	}
