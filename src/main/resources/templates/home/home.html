@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>hello</title>
+	<link th:replace = "layouts :: stylish" />
+</head>
+
+<body>
+	
+	<div th:replace = "layouts :: navbar"></div>
+	<br><br><br><br><br>
+		
+	<div class='container container-fluid'>
+		
+		
+		<p th:text="'Hello, ' + ${name} + '!'" />
+		
+		<a class='btn btn-outline-success' th:href = "@{/display-employees}" >Get to Employees list</a> <br>
+		<a class='btn btn-outline-success' th:href = "@{/display-departments}" >Get to Department list</a> <br>
+		
+	</div>
+	
+	<br><br><br><br><br>
+	
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>employees-list</title>
+	<link th:replace = "layouts :: stylish" />
+</head>
+
+<body>
+	
+	<div th:replace = "layouts :: navbar"></div>
+	<br><br><br><br><br>
+		
+	<div class='container container-fluid'>
+		
+		<h4 th:text = "number of records : ${size}" ></h4>
+		
+		<br><br>
+
+		<table class="table table-striped table-hover ">
+			<thead>
+				<tr>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr >
+					<th></th>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	
+	<br><br><br><br><br>
+	
+</body>
+</html>
+
+
+
+
+
+
+
