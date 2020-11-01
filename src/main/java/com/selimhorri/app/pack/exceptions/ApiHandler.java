@@ -4,6 +4,8 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.NoSuchElementException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.orm.jpa.JpaObjectRetrievalFailureException;
@@ -17,6 +19,12 @@ import com.selimhorri.app.pack.exceptions.payloads.ExceptionMsg;
 
 @ControllerAdvice
 public class ApiHandler extends ResponseEntityExceptionHandler {
+	
+	private static final Logger logger = LoggerFactory.getLogger(ApiHandler.class);
+	
+	static {
+		logger.info("************ entering " + ApiHandler.class.getName() + " ************");
+	}
 	
 	@ExceptionHandler(
 		value = {

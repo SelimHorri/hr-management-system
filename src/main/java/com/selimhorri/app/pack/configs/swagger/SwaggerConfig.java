@@ -2,6 +2,8 @@ package com.selimhorri.app.pack.configs.swagger;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -18,6 +20,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @Profile(value = {"dev", "qa"})
 public class SwaggerConfig {
+	
+	private static final Logger logger = LoggerFactory.getLogger(SwaggerConfig.class);
+	
+	static {
+		logger.info("************ entering " + SwaggerConfig.class.getName() + " ************");
+	}
 	
 	@Bean
 	public Docket productApi() {

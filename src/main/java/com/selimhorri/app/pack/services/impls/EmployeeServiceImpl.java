@@ -1,11 +1,14 @@
 package com.selimhorri.app.pack.services.impls;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import javax.transaction.Transactional;
 
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +23,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	private final EmployeeRepository rep;
 	private final ModelMapper modelMapper;
+	private static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
+	
+	static {
+		logger.info("************ entering " + EmployeeServiceImpl.class.getName() + " ************");
+	}
 	
 	@Autowired
 	public EmployeeServiceImpl(final EmployeeRepository rep, final ModelMapper modelMapper) {
@@ -29,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public List<Employee> findAll() {
-		return this.rep.findAll();
+		return Collections.unmodifiableList(this.rep.findAll());
 	}
 	
 	@Override
