@@ -7,6 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * @author selim
+ */
 @Controller
 @RequestMapping(value = {"/", "/app"})
 public class HomeController {
@@ -17,6 +20,11 @@ public class HomeController {
 		logger.info("************ entering " + HomeController.class.getName() + " ************");
 	}
 	
+	/**
+	 * Display Home page
+	 * @param model
+	 * @return home view
+	 */
 	@GetMapping(value = {""})
 	public String displayIndex(final Model model) {
 		model.addAttribute("name", "selim");

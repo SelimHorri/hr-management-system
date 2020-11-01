@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.selimhorri.app.pack.models.entities.Employee;
 import com.selimhorri.app.pack.services.EmployeeService;
 
+/**
+ * @author Selim Horri
+ */
 @Controller
 @RequestMapping(value = {"/app/employees"})
 public class EmployeeController {
@@ -29,11 +32,20 @@ public class EmployeeController {
 		logger.info("************ entering " + EmployeeController.class.getName() + " ************");
 	}
 	
+	/**
+	 * Inject main Service
+	 * @param service
+	 */
 	@Autowired
 	public EmployeeController(final EmployeeService service) {
 		this.service = service;
 	}
 	
+	/**
+	 * Display employees-list view
+	 * @param model
+	 * @return employees-list view
+	 */
 	@GetMapping(value = {"/employees-list"})
 	public String displayEmployeesList(final Model model) {
 		
@@ -43,11 +55,21 @@ public class EmployeeController {
 		return "employees/employees-list";
 	}
 	
+	/**
+	 * Display employees-add view
+	 * @return employees-add view
+	 */
 	@GetMapping(value = {"/employees-add"})
 	public String displayEmployeeAdd() {
 		return "employees/employees-add";
 	}
 	
+	/**
+	 * Save employee
+	 * @param employee
+	 * @param model
+	 * @return employees-add view
+	 */
 	@PostMapping(value = {"/employees-add"})
 	public String handleEmployeeAdd(@ModelAttribute("employee") final Employee employee, final Model model) {
 		
@@ -57,6 +79,12 @@ public class EmployeeController {
 		return "employees/employees-add";
 	}
 	
+	/**
+	 * Display employees-edit view
+	 * @param id
+	 * @param model
+	 * @return employees-edit view
+	 */
 	@GetMapping(value = {"/employees-edit/{id}"})
 	public String displayEmployeesEdit(@PathVariable("id") final String id, final Model model) {
 		
@@ -65,6 +93,12 @@ public class EmployeeController {
 		return "employees/employees-edit";
 	}
 	
+	/**
+	 * Update department
+	 * @param employee
+	 * @param model
+	 * @return employees-list view
+	 */
 	@PutMapping(value = {"/employees-edit"})
 	public String handleEmployeesEdit(@ModelAttribute("employee") final Employee employee, final Model model) {
 		
@@ -73,6 +107,10 @@ public class EmployeeController {
 		return "employees/employees-list";
 	}
 	
+	/**
+	 * Delete an existing department by its id
+	 * @return employees-list view
+	 */
 	@DeleteMapping(value = {"/employees-delete"})
 	public String handleEmployeeDelete() {
 		return "redirect:/employees-list";
