@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import com.selimhorri.app.pack.models.entities.Employee;
 
+/**
+ * @author Selim Horri
+ */
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	

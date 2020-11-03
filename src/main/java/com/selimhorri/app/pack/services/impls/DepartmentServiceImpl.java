@@ -26,31 +26,56 @@ public class DepartmentServiceImpl implements DepartmentService {
 		logger.info("************ entering " + DepartmentServiceImpl.class.getName() + " ************");
 	}
 	
+	/**
+	 * Inject main Service
+	 * @param rep
+	 */
 	@Autowired
 	public DepartmentServiceImpl(final DepartmentRepository rep) {
 		this.rep = rep;
 	}
 	
+	/**
+	 * @return unmodifiable list of departments
+	 */
 	@Override
 	public List<Department> findAll() {
 		return Collections.unmodifiableList(this.rep.findAll());
 	}
 	
+	/**
+	 * @param id
+	 * @return a department by id
+	 */
 	@Override
 	public Department findById(final Integer id) {
 		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException("\n------------ NO ELEMENT FOUND !!!!! ------------\n"));
 	}
 	
+	/**
+	 * save department
+	 * @param department
+	 * @return a department
+	 */
 	@Override
 	public Department save(final Department department) {
 		return this.rep.save(department);
 	}
 	
+	/**
+	 * update department
+	 * @param department
+	 * @return a department
+	 */
 	@Override
 	public Department update(final Department department) {
 		return this.rep.save(department);
 	}
 	
+	/**
+	 * delete an department by id
+	 * @param id
+	 */
 	@Override
 	public void delete(final Integer id) {
 		this.rep.delete(this.findById(id));

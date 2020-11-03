@@ -2,6 +2,9 @@ package com.selimhorri.app.pack.models.dto;
 
 import java.io.Serializable;
 
+/**
+ * @author Selim Horri
+ */
 public class BossEmployeeDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

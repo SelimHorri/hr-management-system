@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -50,7 +51,7 @@ public class DepartmentController {
 	public String displayDepartmentsList(final Model model) {
 		
 		final List<Department> departments = this.service.findAll();
-		model.addAttribute("size", departments.size());
+		model.addAttribute("size", departments.size() + " " + this.getClass().getSimpleName().replace("Controller", "") + "s");
 		model.addAttribute("departments", departments);
 		return "departments/departments-list";
 	}
@@ -60,18 +61,23 @@ public class DepartmentController {
 	 * @return departments-add view
 	 */
 	@GetMapping(value = {"/departments-add"})
-	public String displayDepartmentAdd() {
+	public String displayDepartmentAdd(final Model model) {
+		model.addAttribute("department", new Department());
 		return "departments/departments-add";
 	}
 	
 	/**
 	 * Save department
 	 * @param department
+	 * @param error
 	 * @param model
 	 * @return departments-add view
 	 */
 	@PostMapping(value = {"/departments-add"})
-	public String handleDepartmentAdd(@ModelAttribute("department") final Department department, final Model model) {
+	public String handleDepartmentAdd(@ModelAttribute("department") final Department department, final BindingResult error, final Model model) {
+		
+		if (error.hasErrors())
+			return "departments/departments-list";
 		
 		final Department dept = this.service.save(department);
 		System.err.println(dept);
@@ -96,11 +102,15 @@ public class DepartmentController {
 	/**
 	 * Update department
 	 * @param department
+	 * @param error
 	 * @param model
 	 * @return departments-list view
 	 */
 	@PutMapping(value = {"/departments-edit"})
-	public String handleDepartmentsEdit(@ModelAttribute("department") final Department department, final Model model) {
+	public String handleDepartmentsEdit(@ModelAttribute("department") final Department department, final BindingResult error, final Model model) {
+		
+		if (error.hasErrors())
+			return "departments/departments-list";
 		
 		final Department dept = this.service.update(department);
 		System.err.println(dept);

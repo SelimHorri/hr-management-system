@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -50,7 +51,7 @@ public class EmployeeController {
 	public String displayEmployeesList(final Model model) {
 		
 		final List<Employee> employees = this.service.findAll();
-		model.addAttribute("size", employees.size());
+		model.addAttribute("size", employees.size() + " " + this.getClass().getSimpleName().replace("Controller", "") + "s");
 		model.addAttribute("employees", employees);
 		return "employees/employees-list";
 	}
@@ -60,7 +61,8 @@ public class EmployeeController {
 	 * @return employees-add view
 	 */
 	@GetMapping(value = {"/employees-add"})
-	public String displayEmployeeAdd() {
+	public String displayEmployeeAdd(final Model model) {
+		model.addAttribute("employee", new Employee());
 		return "employees/employees-add";
 	}
 	
@@ -68,10 +70,16 @@ public class EmployeeController {
 	 * Save employee
 	 * @param employee
 	 * @param model
+	 * @param error
 	 * @return employees-add view
 	 */
 	@PostMapping(value = {"/employees-add"})
-	public String handleEmployeeAdd(@ModelAttribute("employee") final Employee employee, final Model model) {
+	public String handleEmployeeAdd(@ModelAttribute("employee") final Employee employee, final BindingResult error, final Model model) {
+		
+		if (error.hasErrors()) {
+			System.err.println(error);
+			return "redirect:/app/employees/employees-list";
+		}
 		
 		final Employee emp = this.service.save(employee);
 		System.err.println(emp);
@@ -97,14 +105,20 @@ public class EmployeeController {
 	 * Update department
 	 * @param employee
 	 * @param model
+	 * @param error
 	 * @return employees-list view
 	 */
 	@PutMapping(value = {"/employees-edit"})
-	public String handleEmployeesEdit(@ModelAttribute("employee") final Employee employee, final Model model) {
+	public String handleEmployeesEdit(@ModelAttribute("employee") final Employee employee, final BindingResult error, final Model model) {
+		
+		if (error.hasErrors()) {
+			System.err.println(error);
+			return "redirect:/app/employees/employees-list";
+		}
 		
 		final Employee emp = this.service.update(employee);
 		System.err.println(emp);
-		return "employees/employees-list";
+		return "redirect:/app/employees/employees-list";
 	}
 	
 	/**
@@ -113,7 +127,7 @@ public class EmployeeController {
 	 */
 	@DeleteMapping(value = {"/employees-delete"})
 	public String handleEmployeeDelete() {
-		return "redirect:/employees-list";
+		return "redirect:/app/employees/employees-list";
 	}
 	
 	

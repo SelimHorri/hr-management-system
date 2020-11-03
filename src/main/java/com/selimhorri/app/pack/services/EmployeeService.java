@@ -5,6 +5,9 @@ import java.util.List;
 import com.selimhorri.app.pack.models.dto.BossEmployeeDTO;
 import com.selimhorri.app.pack.models.entities.Employee;
 
+/**
+ * @author Selim Horri
+ */
 public interface EmployeeService {
 	
 	public abstract List<Employee> findAll();

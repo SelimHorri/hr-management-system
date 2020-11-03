@@ -18,6 +18,9 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
+/**
+ * @author Selim Horri
+ */
 @Entity(name = "employees")
 @Table(name = "employees")
 public final class Employee implements Serializable {

@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.selimhorri.app.pack.models.entities.Department;
 
+/**
+ * @author Selim Horri
+ */
 public interface DepartmentService {
 	
 	public abstract List<Department> findAll();

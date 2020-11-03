@@ -17,6 +17,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import com.selimhorri.app.pack.exceptions.payloads.ExceptionMsg;
 
+/**
+ * @author Selim Horri
+ */
 @ControllerAdvice
 public class ApiHandler extends ResponseEntityExceptionHandler {
 	
@@ -26,6 +29,13 @@ public class ApiHandler extends ResponseEntityExceptionHandler {
 		logger.info("************ entering " + ApiHandler.class.getName() + " ************");
 	}
 	
+	/**
+	 * handle all runtime exceptions and try to print a specific Msg for end user through my payload
+	 * @param <T>
+	 * @param exception
+	 * @param webRequest
+	 * @return ExceptionMsg instance
+	 */
 	@ExceptionHandler(
 		value = {
 			NoSuchElementException.class,

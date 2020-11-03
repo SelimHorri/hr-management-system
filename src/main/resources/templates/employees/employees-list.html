@@ -12,7 +12,7 @@
 	
 	<div th:replace = "layouts :: navbar"></div>
 	<br><br><br><br><br>
-		
+	
 	<div class='container container-fluid'>
 		
 <!--   		<div align = 'center'><h4 th:text = "number of records : ${size}" ></h4></div> -->
@@ -22,7 +22,7 @@
 		<div th:switch="${employees}">
 	    <h2 th:case="null">No Employees yet!</h2>
 	        <div th:case="*">
-	            <h2>Users</h2>
+	            <h2 th:text = '${size}' ></h2>  <br>
 	            <table class="table table-striped table-hover ">
 	                <thead>
 	                    <tr>
@@ -52,7 +52,7 @@
 	            </tbody>
 	        </table>
 	    </div>      
-	    <p><a href="@{/app/employees/employees-add)}">Add a new employee</a></p>
+	    <p><a th:href="@{/app/employees/employees-add}">Add a new employee</a></p>
 	</div>
 
 	</div>

@@ -29,37 +29,67 @@ public class EmployeeServiceImpl implements EmployeeService {
 		logger.info("************ entering " + EmployeeServiceImpl.class.getName() + " ************");
 	}
 	
+	/**
+	 * Inject main Service
+	 * @param rep
+	 * @param modelMapper
+	 */
 	@Autowired
 	public EmployeeServiceImpl(final EmployeeRepository rep, final ModelMapper modelMapper) {
 		this.rep = rep;
 		this.modelMapper = modelMapper;
 	}
 	
+	/**
+	 * @return unmodifiable list of employees
+	 */
 	@Override
 	public List<Employee> findAll() {
 		return Collections.unmodifiableList(this.rep.findAll());
 	}
 	
+	/**
+	 * @param id
+	 * @return an employee by id
+	 */
 	@Override
 	public Employee findById(final Integer id) {
 		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException("\n------------ NO ELEMENT FOUND !!!!! ------------\n"));
 	}
 	
+	/**
+	 * save an employee
+	 * @param employee
+	 * @return an employee
+	 */
 	@Override
 	public Employee save(final Employee employee) {
 		return this.rep.save(employee);
 	}
 	
+	/**
+	 * update an employee
+	 * @param employee
+	 * @return an employee
+	 */
 	@Override
 	public Employee update(final Employee employee) {
 		return this.rep.save(employee);
 	}
 	
+	/**
+	 * delete an employee by id
+	 * @param id
+	 */
 	@Override
 	public void delete(final Integer id) {
 		this.rep.delete(this.findById(id));
 	}
 	
+	/**
+	 * get the big BOSS
+	 * @return BossEmployeeDTO
+	 */
 	@Override
 	public BossEmployeeDTO getBoss() {
 		return this.modelMapper.map(this.rep.getBoss(), BossEmployeeDTO.class);

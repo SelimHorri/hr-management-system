@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Departments edit</title>
+	<title>Departments add</title>
 	<link th:replace = "layouts :: stylish" />
 </head>
 
@@ -15,11 +15,11 @@
 		
 	<div class='container container-fluid'>
 		
-		<form th:object = '${department}' th:action = '@{/app/departments/departments-edit}' method = 'POST' >
+		<form th:object = '${department}' th:action = '@{/app/departments/departments-add}' method = 'POST' >
 			<fieldset>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">ID</label>
-				  <input th:field = '*{deptno}' type="number" readonly class="form-control col-xs-3" placeholder="Enter department_id..." id="inputDefault" />
+				  <input th:field = '*{deptno}' type="number" min='1' class="form-control col-xs-3" placeholder="Enter department_id..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('deptno')}" th:errors="*{deptno}"></span>
 				</div>
 				<div class="form-group">
@@ -39,7 +39,7 @@
 			
 			<br><br>
 			<div align='center'>
-				<input type='submit' class='btn btn-primary col-xs-6' value = 'Update Department' />
+				<input type='submit' class='btn btn-primary col-xs-6' value = 'Add Department' />
 			</div>
 			
 		</form>

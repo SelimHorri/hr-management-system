@@ -13,6 +13,9 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.ZonedDateTimeSerializer;
 
+/**
+ * @author Selim Horri
+ */
 public final class ExceptionMsg implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

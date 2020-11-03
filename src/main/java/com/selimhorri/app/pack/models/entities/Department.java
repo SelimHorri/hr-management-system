@@ -13,6 +13,9 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+ * @author Selim Horri
+ */
 @Entity(name = "departments")
 @Table(name = "departments")
 public final class Department implements Serializable {

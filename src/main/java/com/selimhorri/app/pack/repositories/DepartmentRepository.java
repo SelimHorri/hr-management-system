@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.selimhorri.app.pack.models.entities.Department;
 
+/**
+ * @author Selim Horri
+ */
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Integer> {
 	
