@@ -12,7 +12,7 @@ CREATE TABLE employees (
   hiredate DATE DEFAULT NULL,
   sal DECIMAL(7,2) DEFAULT NULL,
   comm DECIMAL(7,2) DEFAULT NULL,
-  deptno INT NOT NULL
+  deptno INT DEFAULT NULL
 );
 
 CREATE TABLE departments  (
@@ -72,7 +72,7 @@ CREATE TABLE employees (
   hiredate DATE DEFAULT NULL,
   sal DECIMAL(7,2) DEFAULT NULL,
   comm DECIMAL(7,2) DEFAULT NULL,
-  deptno INT NOT NULL
+  deptno INT DEFAULT NULL
 );
 
 CREATE TABLE departments  (
@@ -131,7 +131,7 @@ CREATE TABLE employees (
   hiredate DATE DEFAULT NULL,
   sal DECIMAL(7,2) DEFAULT NULL,
   comm DECIMAL(7,2) DEFAULT NULL,
-  deptno INT NOT NULL
+  deptno INT DEFAULT NULL
 );
 
 CREATE TABLE departments  (
@@ -179,26 +179,6 @@ COMMIT;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-COMMIT;
 
 
 

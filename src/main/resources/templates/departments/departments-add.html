@@ -19,17 +19,17 @@
 			<fieldset>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">ID</label>
-				  <input th:field = '*{deptno}' type="number" min='1' class="form-control col-xs-3" placeholder="Enter department_id..." id="inputDefault" />
+				  <input th:field = '*{deptno}' type="number" min='1' class="form-control col-sm-3" placeholder="Enter department_id..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('deptno')}" th:errors="*{deptno}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Name</label>
-				  <input th:field = '*{dname}' type="text" class="form-control col-xs-3" placeholder="Enter department_name..." id="inputDefault" />
+				  <input th:field = '*{dname}' type="text" class="form-control col-sm-3" placeholder="Enter department_name..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('dname')}" th:errors="*{dname}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Location</label>
-				  <input th:field = '*{loc}' type="text" class="form-control col-xs-3" placeholder="Enter department_loc..." id="inputDefault" />
+				  <input th:field = '*{loc}' type="text" class="form-control col-sm-3" placeholder="Enter department_loc..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('loc')}" th:errors="*{loc}"></span>
 				</div>
 			</fieldset>
@@ -39,7 +39,7 @@
 			
 			<br><br>
 			<div align='center'>
-				<input type='submit' class='btn btn-primary col-xs-6' value = 'Add Department' />
+				<input type='submit' class='btn btn-primary col-sm-6' value = 'Add Department' />
 			</div>
 			
 		</form>

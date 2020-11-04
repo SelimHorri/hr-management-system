@@ -19,57 +19,63 @@
 			<fieldset>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">ID</label>
-				  <input th:field = '*{empno}' type="number" readonly class="form-control col-xs-3" placeholder="Enter employee_id..." id="inputDefault" />
+				  <input th:field = '*{empno}' type="number" readonly class="form-control col-sm-3" placeholder="Enter employee_id..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('empno')}" th:errors="*{empno}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Name</label>
-				  <input th:field = '*{ename}' type="text" class="form-control col-xs-3" placeholder="Enter employee_name..." id="inputDefault" />
+				  <input th:field = '*{ename}' type="text" class="form-control col-sm-3" placeholder="Enter employee_name..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('ename')}" th:errors="*{ename}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Job</label>
-				  <input th:field = '*{job}' type="text" class="form-control col-xs-3" placeholder="Enter employee_job..." id="inputDefault" />
+				  <input th:field = '*{job}' type="text" class="form-control col-sm-3" placeholder="Enter employee_job..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('job')}" th:errors="*{job}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">ManagerID</label>
-				  <input th:field = '*{mgr}' type="number" class="form-control col-xs-3" placeholder="Enter manager_id..." id="inputDefault" />
+				  <input th:field = '*{mgr}' type="number" class="form-control col-sm-3" placeholder="Enter manager_id..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('mgr')}" th:errors="*{mgr}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Hiredate</label>
-				  <input th:field = '*{hireDate}' type="text" class="form-control col-xs-3" placeholder="Enter hiredate..." id="inputDefault" />
-				  <span th:if="${#fields.hasErrors('hireDate')}" th:errors="*{hireDate}"></span>
+				  <input th:field = '*{hireDate}' type="text" class="form-control col-sm-3 " placeholder="Enter hiredate..." id="dp4" />
+				  <span class='span-danger' th:if="${#fields.hasErrors('hireDate')}" th:errors="*{hireDate}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Salary</label>
-				  <input th:field = '*{sal}' type="number" class="form-control col-xs-3" placeholder="Enter salary..." id="inputDefault" />
+				  <input th:field = '*{sal}' type="number" class="form-control col-sm-3" placeholder="Enter salary..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('sal')}" th:errors="*{sal}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Commission</label>
-				  <input th:field = '*{comm}' type="number" class="form-control col-xs-3" placeholder="Enter commission..." id="inputDefault" />
+				  <input th:field = '*{comm}' type="number" class="form-control col-sm-3" placeholder="Enter commission..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('comm')}" th:errors="*{comm}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Department_id</label>
-				  <input th:field = '*{department.deptno}' type="number" class="form-control col-xs-3" placeholder="Enter department_id..." id="inputDefault" />
+				  <input th:field = '*{department.deptno}' type="number" class="form-control col-sm-3" placeholder="Enter department_id..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('department.deptno')}" th:errors="*{department.deptno}"></span>
 				</div>
 			</fieldset>
+			
+			<script type="text/javascript">
+				$('#dp4').datepicker();
+			</script>
 			
 			<br><br>
 			<p th:text = '${msg}' ></p>
 			
 			<br><br>
 			<div align='center'>
-				<input type='submit' class='btn btn-primary col-xs-6 ' value = 'Update Employee' />
+				<input type='submit' class='btn btn-primary ' value = 'Update Employee' />
 			</div>
 			
 		</form>
 		
 	</div>
+	
+	
 	
 	<br><br><br><br><br>
 	

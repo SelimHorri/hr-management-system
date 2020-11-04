@@ -40,7 +40,7 @@ public final class Employee implements Serializable {
 	@Column(name = "mgr", precision = 10)
 	private Integer mgr;
 	
-	@JsonFormat(shape = Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
+	@JsonFormat(shape = Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
 	@Column(name = "hiredate")
@@ -53,7 +53,7 @@ public final class Employee implements Serializable {
 	private Double comm;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "deptno", referencedColumnName = "deptno")
+	@JoinColumn(name = "deptno", referencedColumnName = "deptno", nullable = true)
 	private Department department;
 	
 	public Employee() {

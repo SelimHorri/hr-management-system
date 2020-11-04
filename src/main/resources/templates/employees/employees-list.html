@@ -47,7 +47,7 @@
 	                    <td th:text="${e.comm}"></td>
 	                    <td th:text="${e.department.deptno}"></td>
 	                    <td><a class='btn btn btn-outline-success' th:href="@{/app/employees/employees-edit/{id}(id=${e.empno})}">Edit</a></td>
-	                    <td><a class='btn btn btn-outline-danger' th:href="@{/app/employees/employees-delete/{id}(id=${e.empno})}">Delete</a></td>
+	                    <td><a class='btn btn btn-outline-danger' th:href="@{/app/employees/employees-delete/{id}(id=${e.empno})}" onClick="if (!(confirm('Are you sure you want to delete this employee?'))) return false" > Delete</a></td>
 	                </tr>
 	            </tbody>
 	        </table>

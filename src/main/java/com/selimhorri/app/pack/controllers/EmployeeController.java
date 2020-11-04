@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.selimhorri.app.pack.models.entities.Employee;
@@ -74,7 +74,7 @@ public class EmployeeController {
 	 * @return employees-add view
 	 */
 	@PostMapping(value = {"/employees-add"})
-	public String handleEmployeeAdd(@ModelAttribute("employee") final Employee employee, final BindingResult error, final Model model) {
+	public String handleEmployeeAdd(@ModelAttribute("employee") @Validated final Employee employee, final BindingResult error, final Model model) {
 		
 		if (error.hasErrors()) {
 			System.err.println(error);
@@ -108,8 +108,8 @@ public class EmployeeController {
 	 * @param error
 	 * @return employees-list view
 	 */
-	@PutMapping(value = {"/employees-edit"})
-	public String handleEmployeesEdit(@ModelAttribute("employee") final Employee employee, final BindingResult error, final Model model) {
+	@PostMapping(value = {"/employees-edit"})
+	public String handleEmployeesEdit(@ModelAttribute("employee") @Validated final Employee employee, final BindingResult error, final Model model) {
 		
 		if (error.hasErrors()) {
 			System.err.println(error);
@@ -122,11 +122,22 @@ public class EmployeeController {
 	}
 	
 	/**
+	 * @param id
+	 * @return
+	 */
+	@GetMapping(value = {"/employees-delete/{id}"})
+	public String displayEmployeeDelete(@PathVariable("id") final String id) {
+		this.service.delete(Integer.parseInt(id));
+		return "redirect:/app/employees/employees-list";
+	}
+	
+	/**
 	 * Delete an existing department by its id
 	 * @return employees-list view
 	 */
-	@DeleteMapping(value = {"/employees-delete"})
-	public String handleEmployeeDelete() {
+	@DeleteMapping(value = {"/employees-delete/{id}"})
+	public String handleEmployeeDelete(@PathVariable("id") final String id) {
+		this.service.delete(Integer.parseInt(id));
 		return "redirect:/app/employees/employees-list";
 	}
 	
