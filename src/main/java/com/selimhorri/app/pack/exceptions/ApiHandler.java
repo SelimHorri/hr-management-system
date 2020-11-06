@@ -1,5 +1,6 @@
 package com.selimhorri.app.pack.exceptions;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.NoSuchElementException;
@@ -41,7 +42,8 @@ public class ApiHandler extends ResponseEntityExceptionHandler {
 			NoSuchElementException.class,
 			NumberFormatException.class,
 			MethodArgumentTypeMismatchException.class,
-			JpaObjectRetrievalFailureException.class // if a foreign key does not exist...
+			JpaObjectRetrievalFailureException.class, // if a foreign key does not exist...
+			SQLIntegrityConstraintViolationException.class
 		}
 	)
 	public <T extends RuntimeException> ResponseEntity<ExceptionMsg> handleExceptionMsg(final T exception, final WebRequest webRequest) {

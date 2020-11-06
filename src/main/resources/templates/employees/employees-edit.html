@@ -39,7 +39,7 @@
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Hiredate</label>
-				  <input th:field = '*{hireDate}' type="text" class="form-control col-sm-3 " placeholder="Enter hiredate..." id="dp4" />
+				  <input th:field = "*{hireDate}" type="date" class="form-control col-sm-3 " placeholder="Enter hiredate..." id="dp4" />
 				  <span class='span-danger' th:if="${#fields.hasErrors('hireDate')}" th:errors="*{hireDate}"></span>
 				</div>
 				<div class="form-group">
@@ -59,17 +59,14 @@
 				</div>
 			</fieldset>
 			
-			<script type="text/javascript">
-				$('#dp4').datepicker();
-			</script>
-			
-			<br><br>
-			<p th:text = '${msg}' ></p>
-			
-			<br><br>
-			<div align='center'>
-				<input type='submit' class='btn btn-primary ' value = 'Update Employee' />
+			<br>
+			<div th:switch="${state}">
+				<p th:case="success"><span class="badge badge-success" th:text="${msg}"></span></p>
+				<p th:case="danger"><span class="badge badge-danger" th:text="${msg}"></span></p>
 			</div>
+			<span class="badge badge-danger" th:text="${msg}"></span>
+			
+			<input type='submit' class='btn btn-info btn-lg' value = 'Update Employee' />
 			
 		</form>
 		

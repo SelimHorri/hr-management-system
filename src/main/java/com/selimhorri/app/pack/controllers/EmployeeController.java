@@ -8,13 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.selimhorri.app.pack.models.entities.Employee;
 import com.selimhorri.app.pack.services.EmployeeService;
@@ -74,7 +72,7 @@ public class EmployeeController {
 	 * @return employees-add view
 	 */
 	@PostMapping(value = {"/employees-add"})
-	public String handleEmployeeAdd(@ModelAttribute("employee") @Validated final Employee employee, final BindingResult error, final Model model) {
+	public String handleEmployeeAdd(@ModelAttribute("employee") final Employee employee, final BindingResult error, final Model model) {
 		
 		if (error.hasErrors()) {
 			System.err.println(error);
@@ -83,6 +81,7 @@ public class EmployeeController {
 		
 		final Employee emp = this.service.save(employee);
 		System.err.println(emp);
+		model.addAttribute("state", "success");
 		model.addAttribute("msg", "Employee saved successfully");
 		return "employees/employees-add";
 	}
@@ -93,8 +92,8 @@ public class EmployeeController {
 	 * @param model
 	 * @return employees-edit view
 	 */
-	@GetMapping(value = {"/employees-edit/{id}"})
-	public String displayEmployeesEdit(@PathVariable("id") final String id, final Model model) {
+	@GetMapping(value = {"/employees-edit"})
+	public String displayEmployeesEdit(@RequestParam("id") final String id, final Model model) {
 		
 		final Employee employee = this.service.findById(Integer.parseInt(id));
 		model.addAttribute("employee", employee);
@@ -109,7 +108,7 @@ public class EmployeeController {
 	 * @return employees-list view
 	 */
 	@PostMapping(value = {"/employees-edit"})
-	public String handleEmployeesEdit(@ModelAttribute("employee") @Validated final Employee employee, final BindingResult error, final Model model) {
+	public String handleEmployeesEdit(@ModelAttribute("employee") final Employee employee, final BindingResult error, final Model model) {
 		
 		if (error.hasErrors()) {
 			System.err.println(error);
@@ -118,25 +117,17 @@ public class EmployeeController {
 		
 		final Employee emp = this.service.update(employee);
 		System.err.println(emp);
-		return "redirect:/app/employees/employees-list";
-	}
-	
-	/**
-	 * @param id
-	 * @return
-	 */
-	@GetMapping(value = {"/employees-delete/{id}"})
-	public String displayEmployeeDelete(@PathVariable("id") final String id) {
-		this.service.delete(Integer.parseInt(id));
-		return "redirect:/app/employees/employees-list";
+		model.addAttribute("state", "success");
+		model.addAttribute("msg", "Employee updated successfully!");
+		return "redirect:/app/employees/employees-add";
 	}
 	
 	/**
 	 * Delete an existing department by its id
 	 * @return employees-list view
 	 */
-	@DeleteMapping(value = {"/employees-delete/{id}"})
-	public String handleEmployeeDelete(@PathVariable("id") final String id) {
+	@GetMapping(value = {"/employees-delete"})
+	public String handleEmployeeDelete(@RequestParam("id") final String id) {
 		this.service.delete(Integer.parseInt(id));
 		return "redirect:/app/employees/employees-list";
 	}

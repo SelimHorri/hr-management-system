@@ -34,13 +34,14 @@
 				</div>
 			</fieldset>
 			
-			<br><br>
-			<p th:text = '${msg}' ></p>
-			
-			<br><br>
-			<div align='center'>
-				<input type='submit' class='btn btn-primary col-sm-6' value = 'Update Department' />
+			<br>
+			<div th:switch="${state}">
+				<p th:case="success"><span class="badge badge-success" th:text="${msg}"></span></p>
+				<p th:case="danger"><span class="badge badge-danger" th:text="${msg}"></span></p>
 			</div>
+			<span class="badge badge-danger" th:text="${msg}"></span>
+			
+			<input type='submit' class='btn btn-info btn-lg ' value = 'Update Department' />
 			
 		</form>
 		

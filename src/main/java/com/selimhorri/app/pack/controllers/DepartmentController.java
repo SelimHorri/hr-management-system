@@ -8,13 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.selimhorri.app.pack.models.entities.Department;
 import com.selimhorri.app.pack.services.DepartmentService;
@@ -69,18 +67,21 @@ public class DepartmentController {
 	/**
 	 * Save department
 	 * @param department
-	 * @param error
 	 * @param model
+	 * @param error
 	 * @return departments-add view
 	 */
 	@PostMapping(value = {"/departments-add"})
 	public String handleDepartmentAdd(@ModelAttribute("department") final Department department, final BindingResult error, final Model model) {
 		
-		if (error.hasErrors())
-			return "departments/departments-list";
+		if (error.hasErrors()) {
+			System.err.println(error);
+			return "redirect:/app/departments/departments-list";
+		}
 		
 		final Department dept = this.service.save(department);
 		System.err.println(dept);
+		model.addAttribute("state", "success");
 		model.addAttribute("msg", "Department saved successfully");
 		return "departments/departments-add";
 	}
@@ -91,8 +92,8 @@ public class DepartmentController {
 	 * @param model
 	 * @return departments-edit view
 	 */
-	@GetMapping(value = {"/departments-edit/{id}"})
-	public String displayDepartmentsEdit(@PathVariable("id") final String id, final Model model) {
+	@GetMapping(value = {"/departments-edit"})
+	public String displayDepartmentsEdit(@RequestParam("id") final String id, final Model model) {
 		
 		final Department department = this.service.findById(Integer.parseInt(id));
 		model.addAttribute("department", department);
@@ -102,28 +103,33 @@ public class DepartmentController {
 	/**
 	 * Update department
 	 * @param department
-	 * @param error
 	 * @param model
+	 * @param error
 	 * @return departments-list view
 	 */
-	@PutMapping(value = {"/departments-edit"})
+	@PostMapping(value = {"/departments-edit"})
 	public String handleDepartmentsEdit(@ModelAttribute("department") final Department department, final BindingResult error, final Model model) {
 		
-		if (error.hasErrors())
-			return "departments/departments-list";
+		if (error.hasErrors()) {
+			System.err.println(error);
+			return "redirect:/app/departments/departments-list";
+		}
 		
 		final Department dept = this.service.update(department);
 		System.err.println(dept);
-		return "departments/departments-list";
+		model.addAttribute("state", "success");
+		model.addAttribute("msg", "Department updated successfully!");
+		return "redirect:/app/departments/departments-add";
 	}
 	
 	/**
 	 * Delete an existing department by its id
 	 * @return departments-list view
 	 */
-	@DeleteMapping(value = {"/departments-delete"})
-	public String handleDepartmentDelete() {
-		return "redirect:/departments-list";
+	@GetMapping(value = {"/departments-delete"})
+	public String handleDepartmentDelete(@RequestParam("id") final String id) {
+		this.service.delete(Integer.parseInt(id));
+		return "redirect:/app/departments/departments-list";
 	}
 	
 	
