@@ -78,7 +78,7 @@ public final class Employee implements Serializable {
 	@Override
 	public String toString() {
 		return "Employee [empno=" + empno + ", ename=" + ename + ", job=" + job + ", mgr=" + mgr + ", hireDate="
-				+ hireDate + ", sal=" + sal + ", comm=" + comm + ", department=" + department
+				+ hireDate + ", sal=" + sal + ", comm=" + comm + ", deptno=" + department.getDeptno()
 				+ "]";
 	}
 	

@@ -39,17 +39,17 @@
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Hiredate</label>
-				  <input th:field = "*{hireDate}" type="date" class="form-control col-sm-3 " placeholder="Enter hiredate..." id="dp4" />
+				  <input th:field = "*{hireDate}" type="datetime" class="form-control col-sm-3 " placeholder="Enter hiredate..." id="dp4" />
 				  <span class='span-danger' th:if="${#fields.hasErrors('hireDate')}" th:errors="*{hireDate}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Salary</label>
-				  <input th:field = '*{sal}' type="number" class="form-control col-sm-3" placeholder="Enter salary..." id="inputDefault" />
+				  <input th:field = '*{sal}' type="text" class="form-control col-sm-3" placeholder="Enter salary..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('sal')}" th:errors="*{sal}"></span>
 				</div>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">Commission</label>
-				  <input th:field = '*{comm}' type="number" class="form-control col-sm-3" placeholder="Enter commission..." id="inputDefault" />
+				  <input th:field = '*{comm}' type="text" class="form-control col-sm-3" placeholder="Enter commission..." id="inputDefault" />
 				  <span th:if="${#fields.hasErrors('comm')}" th:errors="*{comm}"></span>
 				</div>
 				<div class="form-group">
@@ -60,11 +60,10 @@
 			</fieldset>
 			
 			<br>
-			<div th:switch="${state}">
+			<div th:switch="${msgColour}">
 				<p th:case="success"><span class="badge badge-success" th:text="${msg}"></span></p>
 				<p th:case="danger"><span class="badge badge-danger" th:text="${msg}"></span></p>
 			</div>
-			<span class="badge badge-danger" th:text="${msg}"></span>
 			
 			<input type='submit' class='btn btn-info btn-lg' value = 'Update Employee' />
 			

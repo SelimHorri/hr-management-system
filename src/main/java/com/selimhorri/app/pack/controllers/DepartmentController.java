@@ -81,7 +81,7 @@ public class DepartmentController {
 		
 		final Department dept = this.service.save(department);
 		System.err.println(dept);
-		model.addAttribute("state", "success");
+		model.addAttribute("msgColour", "success");
 		model.addAttribute("msg", "Department saved successfully");
 		return "departments/departments-add";
 	}
@@ -117,9 +117,9 @@ public class DepartmentController {
 		
 		final Department dept = this.service.update(department);
 		System.err.println(dept);
-		model.addAttribute("state", "success");
+		model.addAttribute("msgColour", "success");
 		model.addAttribute("msg", "Department updated successfully!");
-		return "redirect:/app/departments/departments-add";
+		return "redirect:/app/departments/departments-edit";
 	}
 	
 	/**

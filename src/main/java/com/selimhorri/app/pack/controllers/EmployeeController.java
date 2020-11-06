@@ -80,8 +80,8 @@ public class EmployeeController {
 		}
 		
 		final Employee emp = this.service.save(employee);
-		System.err.println(emp);
-		model.addAttribute("state", "success");
+		 System.err.println(emp);
+		model.addAttribute("msgColour", "success");
 		model.addAttribute("msg", "Employee saved successfully");
 		return "employees/employees-add";
 	}
@@ -116,10 +116,10 @@ public class EmployeeController {
 		}
 		
 		final Employee emp = this.service.update(employee);
-		System.err.println(emp);
-		model.addAttribute("state", "success");
+		 System.err.println(emp);
+		model.addAttribute("msgColour", "success");
 		model.addAttribute("msg", "Employee updated successfully!");
-		return "redirect:/app/employees/employees-add";
+		return "redirect:/app/employees/employees-edit";
 	}
 	
 	/**

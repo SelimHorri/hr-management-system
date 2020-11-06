@@ -35,7 +35,7 @@
 			</fieldset>
 			
 			<br>
-			<div th:switch="${state}">
+			<div th:switch="${msgColour}">
 				<p th:case="success"><span class="badge badge-success" th:text="${msg}"></span></p>
 				<p th:case="danger"><span class="badge badge-danger" th:text="${msg}"></span></p>
 			</div>

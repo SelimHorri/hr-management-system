@@ -49,7 +49,7 @@ public final class Department implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Department [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + ", employees=" + employees + "]";
+		return "Department [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + "]";
 	}
 	
 	public Integer getDeptno() {
