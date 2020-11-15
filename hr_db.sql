@@ -35,6 +35,8 @@ INSERT INTO employees VALUES ('7876','ADAMS','CLERK','7788','1983-01-12','1100.0
 INSERT INTO employees VALUES ('7900','JAMES','CLERK','7698','1981-12-03','950.00',NULL,'30');
 INSERT INTO employees VALUES ('7902','FORD','ANALYST','7566','1981-12-03','3000.00',NULL,'20');
 INSERT INTO employees VALUES ('7934','MILLER','CLERK','7782','1982-01-23','1300.00',NULL,'10');
+INSERT INTO employees VALUES ('120','Selim','Horri','7782','2019-04-15','900',NULL,'10');
+INSERT INTO employees VALUES ('121','Amine','Ladjimi','7782', '2020-01-01','800',NULL,'10');
 
 INSERT INTO departments  VALUES ('10','ACCOUNTING','NEW YORK');
 INSERT INTO departments  VALUES ('20','RESEARCH','DALLAS');
@@ -53,6 +55,24 @@ PRIMARY KEY (deptno);
 
 ALTER TABLE employees 
 ADD constraint fk_deptno foreign key (deptno) references departments (deptno);
+
+
+CREATE TABLE users (
+	user_id INT NOT NULL primary key AUTO_INCREMENT,
+	username VARCHAR(100),
+	password VARCHAR(200),
+	enabled BOOLEAN,
+	role VARCHAR(200),
+	UNIQUE(username)
+);
+
+INSERT INTO users (username, password, enabled, role)
+	VALUES ('selimhorri', '$2y$12$15hW6ASpBNyAzitHxRBTKege4CZKZtHEyXQSCbipAlubBZ9zhzmXi', true, 'ADMIN_ROLE'); -- password: 0000
+INSERT INTO users (username, password, enabled, role)
+	VALUES ('amineladjimi', '$2y$12$JmloccGkoQ.c2gmmxd855eLbY4aGV4urC/Ilux5cRZ62lDLzCefVq', true, 'EMP_ROLE'); -- password: 12345
+
+
+
 
 
 
@@ -95,6 +115,8 @@ INSERT INTO employees VALUES ('7876','ADAMS','CLERK','7788','1983-01-12','1100.0
 INSERT INTO employees VALUES ('7900','JAMES','CLERK','7698','1981-12-03','950.00',NULL,'30');
 INSERT INTO employees VALUES ('7902','FORD','ANALYST','7566','1981-12-03','3000.00',NULL,'20');
 INSERT INTO employees VALUES ('7934','MILLER','CLERK','7782','1982-01-23','1300.00',NULL,'10');
+INSERT INTO employees VALUES ('120','Selim','Horri','7782','2019-04-15','900',NULL,'10');
+INSERT INTO employees VALUES ('121','Amine','Ladjimi','7782', '2020-01-01','800',NULL,'10');
 
 INSERT INTO departments  VALUES ('10','ACCOUNTING','NEW YORK');
 INSERT INTO departments  VALUES ('20','RESEARCH','DALLAS');
@@ -113,6 +135,24 @@ PRIMARY KEY (deptno);
 
 ALTER TABLE employees 
 ADD constraint fk_deptno foreign key (deptno) references departments (deptno);
+
+
+CREATE TABLE users (
+	user_id INT NOT NULL primary key AUTO_INCREMENT,
+	username VARCHAR(100),
+	password VARCHAR(200),
+	enabled BOOLEAN,
+	role VARCHAR(200),
+	UNIQUE(username)
+);
+
+INSERT INTO users (username, password, enabled, role)
+	VALUES ('selimhorri', '$2y$12$15hW6ASpBNyAzitHxRBTKege4CZKZtHEyXQSCbipAlubBZ9zhzmXi', true, 'ADMIN_ROLE'); -- password: 0000
+INSERT INTO users (username, password, enabled, role)
+	VALUES ('amineladjimi', '$2y$12$JmloccGkoQ.c2gmmxd855eLbY4aGV4urC/Ilux5cRZ62lDLzCefVq', true, 'EMP_ROLE'); -- password: 12345
+
+
+
 
 
 -- ***********************************
@@ -154,6 +194,8 @@ INSERT INTO employees VALUES ('7876','ADAMS','CLERK','7788','1983-01-12','1100.0
 INSERT INTO employees VALUES ('7900','JAMES','CLERK','7698','1981-12-03','950.00',NULL,'30');
 INSERT INTO employees VALUES ('7902','FORD','ANALYST','7566','1981-12-03','3000.00',NULL,'20');
 INSERT INTO employees VALUES ('7934','MILLER','CLERK','7782','1982-01-23','1300.00',NULL,'10');
+INSERT INTO employees VALUES ('120','Selim','Horri','7782','2019-04-15','900',NULL,'10');
+INSERT INTO employees VALUES ('121','Amine','Ladjimi','7782', '2020-01-01','800',NULL,'10');
 
 INSERT INTO departments  VALUES ('10','ACCOUNTING','NEW YORK');
 INSERT INTO departments  VALUES ('20','RESEARCH','DALLAS');
@@ -172,6 +214,22 @@ PRIMARY KEY (deptno);
 
 ALTER TABLE employees 
 ADD constraint fk_deptno foreign key (deptno) references departments (deptno);
+
+
+CREATE TABLE users (
+	user_id INT NOT NULL primary key AUTO_INCREMENT,
+	username VARCHAR(100),
+	password VARCHAR(200),
+	enabled BOOLEAN,
+	role VARCHAR(200),
+	UNIQUE(username)
+);
+
+INSERT INTO users (username, password, enabled, role)
+	VALUES ('selimhorri', '$2y$12$15hW6ASpBNyAzitHxRBTKege4CZKZtHEyXQSCbipAlubBZ9zhzmXi', true, 'ADMIN_ROLE'); -- password: 0000
+INSERT INTO users (username, password, enabled, role)
+	VALUES ('amineladjimi', '$2y$12$JmloccGkoQ.c2gmmxd855eLbY4aGV4urC/Ilux5cRZ62lDLzCefVq', true, 'EMP_ROLE'); -- password: 12345
+
 
 
 COMMIT;
