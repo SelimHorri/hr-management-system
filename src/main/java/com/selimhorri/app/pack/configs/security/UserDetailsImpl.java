@@ -16,13 +16,13 @@ public class UserDetailsImpl implements UserDetails {
 	}
 	
 	@Override
-	public String getPassword() {
+	public String getUsername() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
 	@Override
-	public String getUsername() {
+	public String getPassword() {
 		// TODO Auto-generated method stub
 		return null;
 	}
