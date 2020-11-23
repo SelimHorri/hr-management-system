@@ -119,7 +119,7 @@ public class DepartmentController {
 		System.err.println(dept);
 		model.addAttribute("msgColour", "success");
 		model.addAttribute("msg", "Department updated successfully!");
-		return "redirect:/app/departments/departments-edit";
+		return "departments/departments-edit";
 	}
 	
 	/**

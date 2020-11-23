@@ -27,7 +27,7 @@ public class HomeController {
 	 */
 	@GetMapping(value = {""})
 	public String displayIndex(final Model model) {
-		model.addAttribute("name", "selim");
+		model.addAttribute("name", "ARBI");
 		return "home/home";
 	}
 	

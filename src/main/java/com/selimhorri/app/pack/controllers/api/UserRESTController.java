@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.selimhorri.app.pack.models.entities.User;
+import com.selimhorri.app.pack.models.entities.UserCredentials;
 import com.selimhorri.app.pack.services.UserService;
 
 @RestController
@@ -21,7 +21,7 @@ public class UserRESTController {
 	}
 	
 	@GetMapping(value = {"/{id}"})
-	public User findById(@PathVariable("id") final Integer id) {
+	public UserCredentials findById(@PathVariable("id") final Integer id) {
 		return this.service.findById(id);
 	}
 	

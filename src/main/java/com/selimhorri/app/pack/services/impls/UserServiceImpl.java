@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.selimhorri.app.pack.models.entities.User;
+import com.selimhorri.app.pack.models.entities.UserCredentials;
 import com.selimhorri.app.pack.repositories.UserRepository;
 import com.selimhorri.app.pack.services.UserService;
 
@@ -25,17 +25,17 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public List<User> findAll() {
+	public List<UserCredentials> findAll() {
 		return Collections.unmodifiableList(this.rep.findAll());
 	}
 	
 	@Override
-	public User findById(final Integer id) {
+	public UserCredentials findById(final Integer id) {
 		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException(""));
 	}
 	
 	@Override
-	public User findByUsername(String username) {
+	public UserCredentials findByUsername(String username) {
 		return this.rep.findByUsername(username);
 	}
 	

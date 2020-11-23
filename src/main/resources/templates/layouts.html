@@ -9,14 +9,21 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	-->
+	<!--
 	<link th:fragment = "stylish" rel="stylesheet"
 		href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
 		integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
 		crossorigin="anonymous"
 	/>
-	
-	
-	<div th:fragment = "navbar" >
+	-->
+	<link th:fragment = "stylish" rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css"
+		integrity="sha384-zEpdAL7W11eTKeoBJK1g79kgl9qjP7g84KfK3AZsuonx38n8ad+f5ZgXtoSDxPOh"
+		crossorigin="anonymous"
+	/>
+
+
+<div th:fragment = "navbar" >
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" th:href="@{/}">App</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -34,7 +41,7 @@
 				</ul>
 				<div class="my-2 my-lg-0">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item"><a class="nav-link my-2 my-sm-0" href="#">Login</a></li>
+						<li class="nav-item"><a class="nav-link my-2 my-sm-0" th:href="@{/login}">Login</a></li>
 						<li class="nav-item"><a class="nav-link my-2 my-sm-0" href="#">Register</a></li>
 					</ul>
 				</div>

@@ -2,13 +2,13 @@ package com.selimhorri.app.pack.services;
 
 import java.util.List;
 
-import com.selimhorri.app.pack.models.entities.User;
+import com.selimhorri.app.pack.models.entities.UserCredentials;
 
 public interface UserService {
 	
-	public abstract List<User> findAll();
-	public abstract User findById(final Integer id);
-	public abstract User findByUsername(final String username);
+	public abstract List<UserCredentials> findAll();
+	public abstract UserCredentials findById(final Integer id);
+	public abstract UserCredentials findByUsername(final String username);
 	
 }
 

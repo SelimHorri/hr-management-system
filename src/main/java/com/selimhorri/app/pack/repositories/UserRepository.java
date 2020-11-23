@@ -5,13 +5,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.selimhorri.app.pack.models.entities.User;
+import com.selimhorri.app.pack.models.entities.UserCredentials;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<UserCredentials, Integer> {
 	
-	@Query(name = "User.findByUsername", nativeQuery = true)
-	public abstract User findByUsername(@Param("username") final String username);
+	@Query(name = "UserCredentials.findByUsername", nativeQuery = true)
+	public abstract UserCredentials findByUsername(@Param("username") final String username);
 	
 }
 

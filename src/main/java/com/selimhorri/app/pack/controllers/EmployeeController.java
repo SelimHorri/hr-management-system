@@ -119,7 +119,7 @@ public class EmployeeController {
 		 System.err.println(emp);
 		model.addAttribute("msgColour", "success");
 		model.addAttribute("msg", "Employee updated successfully!");
-		return "redirect:/app/employees/employees-edit";
+		return "employees/employees-edit";
 	}
 	
 	/**
