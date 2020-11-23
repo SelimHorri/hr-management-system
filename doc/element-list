@@ -8,5 +8,6 @@ com.selimhorri.app.pack.exceptions.payloads
 com.selimhorri.app.pack.models.dto
 com.selimhorri.app.pack.models.entities
 com.selimhorri.app.pack.repositories
+com.selimhorri.app.pack.security
 com.selimhorri.app.pack.services
 com.selimhorri.app.pack.services.impls

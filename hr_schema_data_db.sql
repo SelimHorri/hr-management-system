@@ -63,8 +63,8 @@ INSERT INTO `departments` (`deptno`, `dname`, `loc`) VALUES
 (40, 'OPERATIONS', 'BOSTON');
 
 INSERT INTO `users_credentials` (`user_id`, `username`, `password`, `enabled`, `role`) VALUES
-(1, 'selimhorri', '$2y$12$g1zWC1G1Ywl7pQzfsuj86uMI2XsK8QQuhpYL7LR7C1JIkwdYzTskG', true, 'ADMIN_ROLE'), -- 0000
-(2, 'amineladjimi', '$2y$12$UVxchYn/NzwNIOX4cAJix.B8Hst444hutFwBDHLPXIEmvjhicZx.S', true, 'EMP_ROLE'); -- 0000
+(1, 'selimhorri', '$2y$12$g1zWC1G1Ywl7pQzfsuj86uMI2XsK8QQuhpYL7LR7C1JIkwdYzTskG', true, 'ROLE_ADMIN'), -- 0000
+(2, 'amineladjimi', '$2y$12$UVxchYn/NzwNIOX4cAJix.B8Hst444hutFwBDHLPXIEmvjhicZx.S', true, 'ROLE_EMP'); -- 0000
 
 
 
@@ -164,8 +164,8 @@ INSERT INTO `departments` (`deptno`, `dname`, `loc`) VALUES
 (40, 'OPERATIONS', 'BOSTON');
 
 INSERT INTO `users_credentials` (`user_id`, `username`, `password`, `enabled`, `role`) VALUES
-(1, 'selimhorri', '$2y$12$g1zWC1G1Ywl7pQzfsuj86uMI2XsK8QQuhpYL7LR7C1JIkwdYzTskG', true, 'ADMIN_ROLE'), -- 0000
-(2, 'amineladjimi', '$2y$12$UVxchYn/NzwNIOX4cAJix.B8Hst444hutFwBDHLPXIEmvjhicZx.S', true, 'EMP_ROLE'); -- 0000
+(1, 'selimhorri', '$2y$12$g1zWC1G1Ywl7pQzfsuj86uMI2XsK8QQuhpYL7LR7C1JIkwdYzTskG', true, 'ROLE_ADMIN'), -- 0000
+(2, 'amineladjimi', '$2y$12$UVxchYn/NzwNIOX4cAJix.B8Hst444hutFwBDHLPXIEmvjhicZx.S', true, 'ROLE_EMP'); -- 0000
 
 
 
@@ -265,8 +265,8 @@ INSERT INTO `departments` (`deptno`, `dname`, `loc`) VALUES
 (40, 'OPERATIONS', 'BOSTON');
 
 INSERT INTO `users_credentials` (`user_id`, `username`, `password`, `enabled`, `role`) VALUES
-(1, 'selimhorri', '$2y$12$g1zWC1G1Ywl7pQzfsuj86uMI2XsK8QQuhpYL7LR7C1JIkwdYzTskG', true, 'ADMIN_ROLE'), -- 0000
-(2, 'amineladjimi', '$2y$12$UVxchYn/NzwNIOX4cAJix.B8Hst444hutFwBDHLPXIEmvjhicZx.S', true, 'EMP_ROLE'); -- 0000
+(1, 'selimhorri', '$2y$12$g1zWC1G1Ywl7pQzfsuj86uMI2XsK8QQuhpYL7LR7C1JIkwdYzTskG', true, 'ROLE_ADMIN'), -- 0000
+(2, 'amineladjimi', '$2y$12$UVxchYn/NzwNIOX4cAJix.B8Hst444hutFwBDHLPXIEmvjhicZx.S', true, 'ROLE_EMP'); -- 0000
 
 
 
