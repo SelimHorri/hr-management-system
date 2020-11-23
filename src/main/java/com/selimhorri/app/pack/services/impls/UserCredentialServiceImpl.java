@@ -9,33 +9,33 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.selimhorri.app.pack.models.entities.UserCredentials;
-import com.selimhorri.app.pack.repositories.UserRepository;
-import com.selimhorri.app.pack.services.UserService;
+import com.selimhorri.app.pack.models.entities.UserCredential;
+import com.selimhorri.app.pack.repositories.UserCredentialRepository;
+import com.selimhorri.app.pack.services.UserCredentialService;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService {
+public class UserCredentialServiceImpl implements UserCredentialService {
 	
-	private final UserRepository rep;
+	private final UserCredentialRepository rep;
 	
 	@Autowired
-	public UserServiceImpl(final UserRepository rep) {
+	public UserCredentialServiceImpl(final UserCredentialRepository rep) {
 		this.rep = rep;
 	}
 	
 	@Override
-	public List<UserCredentials> findAll() {
+	public List<UserCredential> findAll() {
 		return Collections.unmodifiableList(this.rep.findAll());
 	}
 	
 	@Override
-	public UserCredentials findById(final Integer id) {
+	public UserCredential findById(final Integer id) {
 		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException(""));
 	}
 	
 	@Override
-	public UserCredentials findByUsername(String username) {
+	public UserCredential findByUsername(String username) {
 		return this.rep.findByUsername(username);
 	}
 	

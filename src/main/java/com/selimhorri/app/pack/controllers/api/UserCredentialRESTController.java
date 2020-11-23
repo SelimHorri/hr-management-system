@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.selimhorri.app.pack.models.entities.UserCredentials;
-import com.selimhorri.app.pack.services.UserService;
+import com.selimhorri.app.pack.models.entities.UserCredential;
+import com.selimhorri.app.pack.services.UserCredentialService;
 
 @RestController
 @RequestMapping("/api/users")
-public class UserRESTController {
+public class UserCredentialRESTController {
 	
-	private final UserService service;
+	private final UserCredentialService service;
 	
 	@Autowired
-	public UserRESTController(UserService service) {
+	public UserCredentialRESTController(UserCredentialService service) {
 		this.service = service;
 	}
 	
 	@GetMapping(value = {"/{id}"})
-	public UserCredentials findById(@PathVariable("id") final Integer id) {
+	public UserCredential findById(@PathVariable("id") final Integer id) {
 		return this.service.findById(id);
 	}
 	

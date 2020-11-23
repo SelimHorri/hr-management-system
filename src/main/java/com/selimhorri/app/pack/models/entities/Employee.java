@@ -61,7 +61,7 @@ public final class Employee implements Serializable {
 	private Department department;
 	
 	@OneToOne(mappedBy = "employee", fetch = FetchType.LAZY)
-	private UserCredentials userCredentials;
+	private UserCredential userCredential;
 	
 	public Employee() {
 		

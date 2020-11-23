@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 @Entity(name = "users_credentials")
 @Table(name = "users_credentials")
-public final class UserCredentials implements Serializable {
+public final class UserCredential implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -49,13 +49,13 @@ public final class UserCredentials implements Serializable {
 	@OneToOne(fetch = FetchType.LAZY)
 	private Employee employee;
 	
-	public UserCredentials() {
+	public UserCredential() {
 		
 	}
 	
 	@Override
 	public String toString() {
-		return "UserCredentials [id=" + id + ", username=" + username + ", password=" + password + ", enabled="
+		return "UserCredential [id=" + id + ", username=" + username + ", password=" + password + ", enabled="
 				+ enabled + ", email=" + email + ", phone=" + phone + ", role=" + role + ", empno= " + employee.getEmpno() + "]";
 	}
 	
