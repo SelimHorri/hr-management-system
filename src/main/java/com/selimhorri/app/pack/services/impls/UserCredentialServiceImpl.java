@@ -31,12 +31,12 @@ public class UserCredentialServiceImpl implements UserCredentialService {
 	
 	@Override
 	public UserCredential findById(final Integer id) {
-		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException(""));
+		return this.rep.findById(id).orElseThrow(() -> new NoSuchElementException("-------------- NO SUCH ELEMENT id = " + id + " --------------"));
 	}
 	
 	@Override
-	public UserCredential findByUsername(String username) {
-		return this.rep.findByUsername(username);
+	public UserCredential findByUsername(final String username) {
+		return this.rep.findByUsername(username).orElseThrow(() -> new NoSuchElementException("-------------- NO SUCH ELEMENT " + username + " --------------"));
 	}
 	
 	

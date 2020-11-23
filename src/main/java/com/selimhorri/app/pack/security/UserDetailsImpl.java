@@ -7,33 +7,31 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.selimhorri.app.pack.models.entities.UserCredential;
+
 public class UserDetailsImpl implements UserDetails {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String username;
+	private final UserCredential userCredential;
 	
-	public UserDetailsImpl() {
-		
-	}
-	
-	public UserDetailsImpl(final String username) {
-		this.username = username;
+	public UserDetailsImpl(final UserCredential userCredential) {
+		this.userCredential = userCredential;
 	}
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.asList(new SimpleGrantedAuthority("EMP_ROLE"));
+		return Arrays.asList(new SimpleGrantedAuthority(this.userCredential.getRole()));
 	}
 	
 	@Override
 	public String getUsername() {
-		return this.username;
+		return this.userCredential.getUsername();
 	}
 	
 	@Override
 	public String getPassword() {
-		return "toor";
+		return this.userCredential.getPassword();
 	}
 	
 	@Override
@@ -53,7 +51,7 @@ public class UserDetailsImpl implements UserDetails {
 	
 	@Override
 	public boolean isEnabled() {
-		return true;
+		return this.userCredential.getEnabled();
 	}
 	
 	
