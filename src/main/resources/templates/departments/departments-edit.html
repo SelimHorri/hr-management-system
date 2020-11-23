@@ -15,7 +15,7 @@
 		
 	<div class='container container-fluid'>
 		
-		<form th:object = '${department}' th:action = '@{/app/departments/departments-edit}' method = 'POST' >
+		<form class='jumbotron' th:object = '${department}' th:action = '@{/app/departments/departments-edit}' method = 'POST' >
 			<fieldset>
 				<div class="form-group">
 				  <label class="col-form-label" for="inputDefault">ID</label>
@@ -35,7 +35,7 @@
 			</fieldset>
 			
 			<br>
-			<div th:switch="${state}">
+			<div th:switch="${msgColour}">
 				<p th:case="success"><span class="badge badge-success" th:text="${msg}"></span></p>
 				<p th:case="danger"><span class="badge badge-danger" th:text="${msg}"></span></p>
 			</div>
