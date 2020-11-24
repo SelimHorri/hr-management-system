@@ -39,8 +39,8 @@ CREATE TABLE `users_credentials` (
 
 
 INSERT INTO `employees` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptno`) VALUES
-(120, 'Selim', 'Horri', 7782, '2019-04-15', '900.00', NULL, 10),
-(121, 'Amine', 'Ladjimi', 7782, '2020-01-01', '800.00', NULL, 10),
+(120, 'Selim Horri', 'Software Developer', 7782, '2019-04-15', '900.00', NULL, 10),
+(121, 'Amine Ladjimi', 'Accountant', 7782, '2020-01-01', '800.00', NULL, 10),
 (7369, 'SMITH', 'CLERK', 7902, '1980-12-17', '800.00', NULL, 20),
 (7499, 'ALLEN', 'SALESMAN', 7698, '1981-02-20', '1600.00', '300.00', 30),
 (7521, 'WARD', 'SALESMAN', 7698, '1981-02-22', '1250.00', '500.00', 30),
@@ -140,8 +140,8 @@ CREATE TABLE `users_credentials` (
 
 
 INSERT INTO `employees` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptno`) VALUES
-(120, 'Selim', 'Horri', 7782, '2019-04-15', '900.00', NULL, 10),
-(121, 'Amine', 'Ladjimi', 7782, '2020-01-01', '800.00', NULL, 10),
+(120, 'Selim Horri', 'Software Developer', 7782, '2019-04-15', '900.00', NULL, 10),
+(121, 'Amine Ladjimi', 'Accountant', 7782, '2020-01-01', '800.00', NULL, 10),
 (7369, 'SMITH', 'CLERK', 7902, '1980-12-17', '800.00', NULL, 20),
 (7499, 'ALLEN', 'SALESMAN', 7698, '1981-02-20', '1600.00', '300.00', 30),
 (7521, 'WARD', 'SALESMAN', 7698, '1981-02-22', '1250.00', '500.00', 30),
@@ -241,8 +241,8 @@ CREATE TABLE `users_credentials` (
 
 
 INSERT INTO `employees` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptno`) VALUES
-(120, 'Selim', 'Horri', 7782, '2019-04-15', '900.00', NULL, 10),
-(121, 'Amine', 'Ladjimi', 7782, '2020-01-01', '800.00', NULL, 10),
+(120, 'Selim Horri', 'Software Developer', 7782, '2019-04-15', '900.00', NULL, 10),
+(121, 'Amine Ladjimi', 'Accountant', 7782, '2020-01-01', '800.00', NULL, 10),
 (7369, 'SMITH', 'CLERK', 7902, '1980-12-17', '800.00', NULL, 20),
 (7499, 'ALLEN', 'SALESMAN', 7698, '1981-02-20', '1600.00', '300.00', 30),
 (7521, 'WARD', 'SALESMAN', 7698, '1981-02-22', '1250.00', '500.00', 30),

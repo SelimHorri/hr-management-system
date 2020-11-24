@@ -1,43 +1,38 @@
 package com.selimhorri.app.pack.security;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
-	private DataSource dataSource;
+	private UserDetailsService userDetailsService;
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	/**
-	 * 
-	 * @param dataSource
+	 * Inject params
+	 * @param userDetailsService
 	 * @param bCryptPasswordEncoder
 	 */
 	@Autowired
-	public SecurityConfig(final DataSource dataSource, final BCryptPasswordEncoder bCryptPasswordEncoder) {
-		this.dataSource = dataSource;
+	public SecurityConfig(final UserDetailsService userDetailsService, final BCryptPasswordEncoder bCryptPasswordEncoder) {
+		this.userDetailsService = userDetailsService;
 		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 	}
 	
 	/**
-	 * 
+	 * @param AuthenticationManagerBuilder auth
 	 */
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-		auth.jdbcAuthentication()
-			.usersByUsernameQuery("SELECT username, password, enabled FROM users_credentials WHERE LOWER(username) = ?")
-			.authoritiesByUsernameQuery("SELECT username, UPPER(role) FROM users_credentials WHERE LOWER(username) = ?")
-			.dataSource(dataSource)
-		.passwordEncoder(bCryptPasswordEncoder);
+		auth.userDetailsService(userDetailsService).passwordEncoder(this.bCryptPasswordEncoder);
 	}
 	
 	/**
@@ -48,45 +43,49 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(final HttpSecurity http) throws Exception {
 		http.csrf().disable()
 			.authorizeRequests()
-			// .antMatchers("/api/**").hasRole("ROLE_ADMIN")
+			.antMatchers("/api/**").hasRole("ADMIN")
 			.antMatchers("/app/**/departments/**").hasRole("ADMIN") // pay attention to roles here
 			.antMatchers("/app/**/employees/**").hasAnyRole("EMP", "ADMIN")
-			// .antMatchers("**/managers/**").hasAnyRole("ROLE_MGR", "ROLE_EMP", "ROLE_ADMIN")
-			// .antMatchers("/app/employees/managers").hasRole("ROLE_MGR")
+			// .antMatchers("**/managers/**").hasAnyRole("MGR", "EMP", "ADMIN")
+			// .antMatchers("/app/employees/managers").hasRole("MGR")
 			.antMatchers("/", "/app").permitAll()
 		.and().formLogin();
 	}
 	
 	
+	// with Jdbc **********************
 	
 	/*
-	private UserDetailsService userDetailsService;
+	private DataSource dataSource;
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	*/
 	
 	/**
-	 * Inject params
-	 * @param userDetailsService
+	 * 
+	 * @param dataSource
 	 * @param bCryptPasswordEncoder
 	 */
 	/*
 	@Autowired
-	public SecurityConfig(final UserDetailsService userDetailsService, final BCryptPasswordEncoder bCryptPasswordEncoder) {
-		this.userDetailsService = userDetailsService;
+	public SecurityConfig(final DataSource dataSource, final BCryptPasswordEncoder bCryptPasswordEncoder) {
+		this.dataSource = dataSource;
 		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 	}
 	*/
 	
 	/**
-	 * @param AuthenticationManagerBuilder auth
+	 * 
 	 */
 	/*
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsService).passwordEncoder(this.bCryptPasswordEncoder);
+		auth.jdbcAuthentication()
+			.usersByUsernameQuery("SELECT username, password, enabled FROM users_credentials WHERE LOWER(username) = ?")
+			.authoritiesByUsernameQuery("SELECT username, UPPER(role) FROM users_credentials WHERE LOWER(username) = ?")
+			.dataSource(dataSource)
+		.passwordEncoder(bCryptPasswordEncoder);
 	}
 	*/
-	
 	
 	
 	

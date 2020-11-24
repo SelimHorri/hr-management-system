@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
-		return new UserDetailsImpl(this.service.findByUsername(username)); // gets the username from login view
+		return new UserDetailsImpl(this.service.findByUsername(username.toLowerCase().trim())); // gets the username from login view
 	}
 	
 	
